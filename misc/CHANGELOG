@@ -13,6 +13,7 @@
     + Request new IP hangs (#4346);
     + Fixed required fields validation (#4328);
     + Can not empty address fields (#4322);
+    + Rack dropdown providing option that is impossible (#4409);
 
     Enhancements, changes:
     ----------------------------
