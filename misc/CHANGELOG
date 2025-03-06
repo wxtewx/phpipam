@@ -13,6 +13,7 @@
     + Request new IP hangs (#4346);
     + Fixed required fields validation (#4328);
     + Can not empty address fields (#4322);
+    + API call to PATCH vlan fails with "Vlan name is required" (#1356);
 
     Enhancements, changes:
     ----------------------------
