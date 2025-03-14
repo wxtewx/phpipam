@@ -13,6 +13,7 @@
     + Request new IP hangs (#4346);
     + Fixed required fields validation (#4328);
     + Can not empty address fields (#4322);
+    + Deletion of Default L2domain permitted through API (#4419);
 
     Enhancements, changes:
     ----------------------------
