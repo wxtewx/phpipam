@@ -14,6 +14,7 @@
     + Fixed required fields validation (#4328);
     + Can not empty address fields (#4322);
     + Deletion of Default L2domain permitted through API (#4419);
+    + Empty POST to Devices API Controller produces a blank device (#4307);
 
     Enhancements, changes:
     ----------------------------
