@@ -13,6 +13,7 @@
     + Request new IP hangs (#4346);
     + Fixed required fields validation (#4328);
     + Can not empty address fields (#4322);
+    + API call to PATCH vlan fails with "Vlan name is required" (#1356);
     + Invalid content type when using API (#4168);
     + Deletion of Default L2domain permitted through API (#4419);
     + Empty POST to Devices API Controller produces a blank device (#4307);
