@@ -2180,9 +2180,23 @@ class Common_functions  {
 							$title[] = $location->name;
 						}
 					} elseif ($get['section'] == "circuits") {
-						$circuit = $this->fetch_object("circuits", "id", $get['subnetId']);
-						if (is_object($circuit)) {
-							$title[] = $circuit->cid;
+						if (isset($get['sPage'])) {
+							if ($get['subnetId']=="logical") {
+								$circuit = $this->fetch_object("circuitsLogical", "id", $get['sPage']);
+								if (is_object($circuit)) {
+									$title[] = $circuit->logical_cid;
+								}
+							} elseif ($get['subnetId']=="providers") {
+								$provider = $this->fetch_object("circuitProviders", "id", $get['sPage']);
+								if (is_object($provider)) {
+									$title[] = $provider->name;
+								}
+							}
+						} else {
+							$circuit = $this->fetch_object("circuits", "id", $get['subnetId']);
+							if (is_object($circuit)) {
+								$title[] = $circuit->cid;
+							}
 						}
 					} elseif ($get['section'] == "pstn-prefixes") {
 						$prefix = $this->fetch_object("pstnPrefixes", "id", $get['subnetId']);

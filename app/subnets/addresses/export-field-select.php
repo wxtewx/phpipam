@@ -52,8 +52,8 @@ print "	</tr>";
 
 # state
 print "	<tr>";
-print "	<td>"._('IP state')."</td>";
-print "	<td><input type='checkbox' name='state' checked> </td>";
+print "	<td>"._('Tag')."</td>";
+print "	<td><input type='checkbox' name='tag' checked> </td>";
 print "	</tr>";
 
 # description - mandatory
@@ -87,10 +87,10 @@ print "	<td><input type='checkbox' name='owner' checked> </td>";
 print "	</tr>";
 
 # switch
-if($User->get_module_permissions ("devices")>=User::ACCESS_R) {
+if($User->get_module_permissions ("devices")>User::ACCESS_NONE) {
 print "	<tr>";
-print "	<td>"._('Switch')."</td>";
-print "	<td><input type='checkbox' name='switch' checked> </td>";
+print "	<td>"._('Device')."</td>";
+print "	<td><input type='checkbox' name='device' checked> </td>";
 print "	</tr>";
 }
 
@@ -107,12 +107,18 @@ print "	<td><input type='checkbox' name='note' checked> </td>";
 print "	</tr>";
 
 # note
-if($User->get_module_permissions ("locations")>=User::ACCESS_R) {
+if($User->get_module_permissions ("locations")>User::ACCESS_NONE) {
 print "	<tr>";
 print "	<td>"._('Location')."</td>";
 print "	<td><input type='checkbox' name='location' checked> </td>";
 print "	</tr>";
 }
+
+# lastSeen
+print " <tr>";
+print " <td>"._('Last seen')."</td>";
+print " <td><input type='checkbox' name='lastSeen' checked> </td>";
+print " </tr>";
 
 # get all custom fields
 $custom_fields = $Tools->fetch_custom_fields ('ipaddresses');
