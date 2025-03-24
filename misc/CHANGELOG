@@ -14,11 +14,15 @@
     + Fixed required fields validation (#4328);
     + Can not empty address fields (#4322);
     + Invalid content type when using API (#4168);
+    + Deletion of Default L2domain permitted through API (#4419);
+    + Empty POST to Devices API Controller produces a blank device (#4307);
+    + jQuery error when adding an IP address range (#4350);
 
     Enhancements, changes:
     ----------------------------
     + Don't update PowerDNS `change_date` removed in v2.1.9;
     + Added Isle of Man postcodes (#4318);
+    + Added `lastSeen` to IP Address export (#2433);
 
     Security Fixes:
     ----------------------------
