@@ -21,6 +21,7 @@
     ----------------------------
     + Don't update PowerDNS `change_date` removed in v2.1.9;
     + Added Isle of Man postcodes (#4318);
+    + Added `lastSeen` to IP Address export (#2433);
 
     Security Fixes:
     ----------------------------
