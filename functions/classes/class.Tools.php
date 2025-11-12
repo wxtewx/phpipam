@@ -214,7 +214,7 @@ class Tools extends Common_functions {
 	 */
 	private function search_subnets_range ($search_term, $high, $low, $custom_fields = array()) {
 		# reformat low/high
-		if($high==0 && $low==0)	{ $high = "1"; $low = "1"; }
+		if($high=="" && $low=="")	{ $high = "1"; $low = "1"; }
 
 		# set search query
 		$query[] = "select * from `subnets` where `description` like :search_term ";

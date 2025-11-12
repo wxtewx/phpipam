@@ -19,6 +19,7 @@
     + Deletion of Default L2domain permitted through API (#4419);
     + Empty POST to Devices API Controller produces a blank device (#4307);
     + jQuery error when adding an IP address range (#4350);
+    + Request new IP hangs (#4346);
 
     Enhancements, changes:
     ----------------------------

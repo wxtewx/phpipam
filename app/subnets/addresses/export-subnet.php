@@ -23,6 +23,9 @@ $Addresses	= new Addresses ($Database);
 # verify that user is logged in
 $User->check_user_session();
 
+// Do not escape html special chars
+$Database->html_escape_enabled = false;
+
 # fetch subnet details
 $subnet = $Tools->fetch_object("subnets", "id", $GET->subnetId);
 if (!is_object($subnet) || $Subnets->check_permission($User->user, $GET->subnetId, $subnet) == User::ACCESS_NONE) {
