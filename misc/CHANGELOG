@@ -31,6 +31,7 @@
     ----------------------------
     + XSS - reflected via HTTP_X_FORWARDED_PORT;
     + XSS - Reflected in install scripts;
+    + XSS - Unsafe HTML allowed in Request IP Instructions;
     + Addedd CSRF cookie for clear-changelog and clear-log;
 
 == 1.7.0
