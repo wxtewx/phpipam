@@ -31,11 +31,11 @@ if (isset($_GET['str'])) {
     
     // Handle different translation functions
     if (isset($_GET['vars'])) {
-        // 带变量的翻译（调用统一的 _() 函数处理）
+        // tr_() with variables
         $vars = json_decode($_GET['vars'], true);
-        print _($_GET['str'], ...$vars);  // 这里调用 PHP 端合并后的 _() 函数
+        print tr_($_GET['str'], ...$vars);
     } else {
-        // 纯文本翻译
+        // Simple translation with _() or gettext()
         print _($_GET['str']);
     }
     exit();
@@ -45,36 +45,36 @@ if (isset($_GET['str'])) {
 header('Content-Type: application/javascript');
 ?>
 /**
- * 统一翻译函数：支持纯文本和带变量的翻译（与 PHP 端同步）
- * @param {string} str - 翻译文本（可包含 %s 等占位符）
- * @param {...*} vars - 可选参数，用于替换占位符的变量
- * @return {string} 翻译后的文本
+ * Basic translation function
  */
-function _(str, ...vars) {
-    // 构建请求数据
-    const data = { str: str };
-    // 如果有变量参数，序列化后传递
-    if (vars.length > 0) {
-        data.vars = JSON.stringify(vars);
-    }
-    // 同步请求翻译结果
+function _(str) {
     return $.ajax({
         url: "functions/js-translations.php",
-        data: data,
+        data: { str: str },
         async: false
     }).responseText || str;
 }
 
 /**
- * Alias for _() (兼容旧代码中使用 gettext_() 的场景)
+ * Alias for _()
  */
 function gettext_(str) {
     return _(str);
 }
 
 /**
- * 保留 tr_() 作为 _() 的别名（兼容旧代码）
+ * Translation function with variable support
+ * @param {string} str - Text to translate
+ * @param {...*} vars - Variables to replace in the text
  */
 function tr_(str, ...vars) {
-    return _(str, ...vars);
+    return $.ajax({
+        url: "functions/js-translations.php",
+        data: { 
+            str: str,
+            vars: JSON.stringify(vars)
+        },
+        async: false
+    }).responseText || str;
 }
+
