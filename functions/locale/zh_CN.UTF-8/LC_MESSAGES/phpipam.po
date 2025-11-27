@@ -3684,9 +3684,11 @@ msgstr "DNS 名称"
 msgid "hostname"
 msgstr "主机名"
 
-#: app/tools/request-ip/index.php:70 app/tools/dhcp/leases.php:70
+#: app/tools/request-ip/index.php:70 
+#: app/tools/dhcp/leases.php:70
 #: app/tools/pstn-prefixes/single-prefix-numbers.php:24
-#: app/login/request_ip_form.php:83 app/admin/customers/edit.php:87
+#: app/login/request_ip_form.php:83 
+#: app/admin/customers/edit.php:87
 #: app/admin/requests/edit.php:149
 msgid "State"
 msgstr "省份"
@@ -16024,18 +16026,6 @@ msgstr ""
 msgid "Invalid zone generator method. Do not manipulate the POST values!"
 msgstr "区域生成器类型无效。 请勿操纵 POST 值！"
 
-#: app/admin/firewall-zones/settings-save.php:61
-msgid "decimal"
-msgstr "十进制"
-
-#: app/admin/firewall-zones/settings-save.php:61
-msgid "hex"
-msgstr "十六进制"
-
-#: app/admin/firewall-zones/settings-save.php:61
-msgid "text"
-msgstr "文本"
-
 #: app/admin/firewall-zones/settings-save.php:62
 msgid "Invalid zone generator types. Do not manipulate the POST values!"
 msgstr "无效的区域生成器类型。请勿操纵 POST 值！"
@@ -16064,10 +16054,6 @@ msgstr "请至少选择一项才能生成有效的名称模式."
 #: app/admin/firewall-zones/settings-save.php:105
 msgid "Invalid device type."
 msgstr "设备类型无效."
-
-#: app/admin/firewall-zones/settings-save.php:109
-msgid "network"
-msgstr "网络"
 
 #: app/admin/firewall-zones/settings-save.php:110
 msgid "Invalid subnet name types. Do not manipulate the POST values!"
@@ -17860,23 +17846,43 @@ msgstr "域名"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
-#: app/admin/powerDNS/index.php:51
+# app/admin/powerDNS/index.php:51
 msgid "host_records"
 msgstr "主机记录"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
-#: app/admin/powerDNS/index.php:51
+# app/admin/powerDNS/index.php:51
 msgid "reverse_v4"
 msgstr "反向 V4"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
-#: app/admin/powerDNS/index.php:51
+# app/admin/powerDNS/index.php:51
 msgid "reverse_v6"
 msgstr "反向 V6"
 
 # app/admin/powerDNS/index.php:51
-#: app/admin/powerDNS/index.php:51
+# app/admin/powerDNS/index.php:51
 msgid "defaults"
 msgstr "默认"
+
+#app/admin/firewall-zones/index.php:24
+msgid "Zones"
+msgstr "区域"
+
+#: app/admin/firewall-zones/settings-save.php:109
+msgid "network"
+msgstr "网络"
+
+#: app/admin/firewall-zones/settings-save.php:61
+msgid "decimal"
+msgstr "十进制"
+
+#: app/admin/firewall-zones/settings-save.php:61
+msgid "hex"
+msgstr "十六进制"
+
+#: app/admin/firewall-zones/settings-save.php:61
+msgid "text"
+msgstr "文本"

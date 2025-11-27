@@ -19036,3 +19036,23 @@ msgstr ""
 #: app/admin/powerDNS/index.php:51
 msgid "defaults"
 msgstr ""
+
+#app/admin/firewall-zones/index.php:24
+msgid "Zones"
+msgstr ""
+
+#: app/admin/firewall-zones/settings-save.php:109
+msgid "network"
+msgstr ""
+
+#: app/admin/firewall-zones/settings-save.php:61
+msgid "decimal"
+msgstr ""
+
+#: app/admin/firewall-zones/settings-save.php:61
+msgid "hex"
+msgstr ""
+
+#: app/admin/firewall-zones/settings-save.php:61
+msgid "text"
+msgstr ""
