@@ -296,7 +296,7 @@ function update_hidden_input(){
 							print "<tr>";
 							print "	<td><a name='rembtn' class='btn btn-xs btn-default btn-danger' rel='tooltip' title="._('Remove')."><i class='fa fa-times'></i></a></td>";
 							print "	<td><a class='btn btn-xs btn-default' href='".create_link('tools',"circuits",$circuit->id)."' target='_blank'><i class='fa fa-random prefix'></i> $circuit->cid</a></td>";
-							print "	<td>".$type_hash[$circuit->type]."</td>";
+							print "	<td>"._($type_hash[$circuit->type])."</td>";
 							print "	<td class='hidden-xs hidden-sm'>$locationA_html</td>";
 							print "	<td class='hidden-xs hidden-sm'>$locationB_html</td>";
 							if($POST->action != "delete") {
@@ -355,7 +355,7 @@ function update_hidden_input(){
 				print '<tr>'. "\n";
 				print " <td><input class='id' type='hidden' value='$circuit->id'><a name='addbtn' class='btn btn-xs btn-success' rel='tooltip' title="._('Add to logical circuit')."><i class='fa fa-plus'></i></a></td>";
 				print "	<td><a class='btn btn-xs btn-default' href='".create_link('tools',"circuits",$circuit->id)."' target='_blank'><i class='fa fa-random prefix'></i> $circuit->cid</a></td>";
-				print "	<td>".$type_hash[$circuit->type]."</td>";
+				print "	<td>"._($type_hash[$circuit->type])."</td>";
 				print "	<td class='hidden-xs hidden-sm'>$locationA_html</td>";
 				print "	<td class='hidden-xs hidden-sm'>$locationB_html</td>";
 				print '</tr>'. "\n";
