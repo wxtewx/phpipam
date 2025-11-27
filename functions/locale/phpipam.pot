@@ -13,7 +13,7 @@
 # "Content-Transfer-Encoding: 8bit\n"
 
 #: index.php:94
-#: js/bootstrap-table/bootstrap-table.min.js:8
+#: js/bootstrap-table/bootstrap-table.min.js:7
 #: app/tools/changelog/index.php:55
 #: app/tools/tools-menu-config.php:79
 #: app/dashboard/widgets/tools.php:23
@@ -642,7 +642,7 @@ msgstr ""
 #: app/subnets/addresses/address-modify.php:258
 #: app/subnets/addresses/address-details/address-details-multicast.php:43
 #: app/subnets/addresses/address-details/address-details.php:90
-#: app/subnets/addresses/print-address-table.php:157
+#: app/subnets/addresses/print-address-table.php:165
 #: app/subnets/addresses/move-address.php:74
 #: app/subnets/addresses/export-field-select.php:61
 #: app/subnets/addresses/mail-notify.php:55
@@ -677,6 +677,7 @@ msgstr ""
 #: app/admin/import-export/export-subnets.php:85
 #: app/admin/import-export/export-subnets.php:263
 #: app/admin/import-export/export-l2dom-field-select.php:41
+#: app/admin/import-export/export-bgp.php:103
 #: app/admin/import-export/export-vrf-field-select.php:52
 #: app/admin/import-export/import-recompute-preview.php:37
 #: app/admin/import-export/export-l2dom.php:54
@@ -817,6 +818,7 @@ msgstr ""
 #: app/admin/import-export/export-ipaddr-field-select.php:81
 #: app/admin/import-export/export-subnets-field-select.php:81
 #: app/admin/import-export/export-subnets.php:95
+#: app/admin/import-export/export-bgp.php:97
 #: app/admin/import-export/import-template.php:38
 #: app/admin/import-export/import-template.php:54
 #: app/admin/custom-fields/index.php:17
@@ -859,7 +861,7 @@ msgstr ""
 #: app/subnets/subnet-details/subnet-details.php:218
 #: app/subnets/addresses/address-modify.php:498
 #: app/subnets/addresses/address-details/address-details.php:149
-#: app/subnets/addresses/print-address-table.php:164
+#: app/subnets/addresses/print-address-table.php:172
 #: app/subnets/addresses/export-field-select.php:92
 #: app/subnets/addresses/mail-notify.php:83
 #: app/subnets/scan/subnet-scan-execute-snmp-mac.php:232
@@ -897,8 +899,9 @@ msgstr ""
 #: app/subnets/subnet-details/subnet-details.php:193
 #: app/subnets/addresses/address-modify.php:449
 #: app/subnets/addresses/address-details/address-details.php:122
-#: app/subnets/addresses/print-address-table.php:168
+#: app/subnets/addresses/print-address-table.php:176
 #: app/subnets/subnet-slaves.php:42
+#: app/admin/import-export/export-bgp.php:101
 #: app/admin/circuits/edit-circuit.php:166
 #: app/admin/customers/edit-submit.php:91
 #: app/admin/vlans/edit.php:145
@@ -1225,7 +1228,7 @@ msgstr ""
 #: app/admin/routing/edit-bgp-mapping-search.php:23
 #: app/admin/routing/edit-bgp.php:38
 #: app/admin/routing/edit-bgp.php:44
-#: app/admin/routing/edit-bgp-submit.php:34
+#: app/admin/routing/edit-bgp-submit.php:47
 #: app/admin/users/edit-result.php:39
 #: app/admin/users/print-user/index.php:10
 #: app/admin/users/edit.php:41
@@ -1749,10 +1752,10 @@ msgstr ""
 #: app/tools/pstn-prefixes/edit-result.php:134
 #: app/admin/locations/edit-result.php:83
 #: app/admin/routing/edit-bgp-mapping-submit.php:28
-#: app/admin/routing/edit-bgp-submit.php:79
+#: app/admin/routing/edit-bgp-submit.php:92
 #: app/admin/users/edit-result.php:170
 #: app/admin/sections/edit-result.php:114
-#: app/admin/nat/edit-result.php:82
+#: app/admin/nat/edit-result.php:91
 msgid "failed"
 msgstr ""
 
@@ -2236,7 +2239,7 @@ msgstr ""
 #: app/subnets/addresses/ping-address.php:77
 #: app/subnets/addresses/ping-address.php:79
 #: app/subnets/addresses/address-details/address-details.php:30
-#: app/subnets/addresses/print-address-table.php:150
+#: app/subnets/addresses/print-address-table.php:158
 #: app/subnets/addresses/move-address.php:57
 #: app/subnets/addresses/export-field-select.php:49
 #: app/subnets/addresses/mail-notify.php:53
@@ -2341,6 +2344,7 @@ msgstr ""
 #: app/temp_share/address.php:82
 #: app/admin/circuits/edit-circuit.php:148
 #: app/admin/circuits/edit-circuit-submit.php:54
+#: app/admin/circuits/edit-circuit-submit.php:61
 msgid "Reserved"
 msgstr ""
 
@@ -2384,7 +2388,7 @@ msgstr ""
 
 #: functions/classes/class.Tools.php:2039
 #: app/tools/customers/customer/objects/ipaddresses.php:84
-#: app/subnets/addresses/print-address-table.php:268
+#: app/subnets/addresses/print-address-table.php:276
 msgid "Address was never online"
 msgstr ""
 
@@ -2394,9 +2398,9 @@ msgstr ""
 #: app/tools/customers/customer/objects/ipaddresses.php:85
 #: app/tools/customers/customer/objects/ipaddresses.php:86
 #: app/tools/customers/customer/objects/ipaddresses.php:89
-#: app/subnets/addresses/print-address-table.php:269
-#: app/subnets/addresses/print-address-table.php:270
-#: app/subnets/addresses/print-address-table.php:273
+#: app/subnets/addresses/print-address-table.php:277
+#: app/subnets/addresses/print-address-table.php:278
+#: app/subnets/addresses/print-address-table.php:281
 msgid "Address is offline"
 msgstr ""
 
@@ -2421,11 +2425,11 @@ msgstr ""
 #: app/subnets/addresses/address-details/address-details.php:212
 #: app/subnets/addresses/address-details/address-details.php:213
 #: app/subnets/addresses/address-details/address-details.php:214
-#: app/subnets/addresses/print-address-table.php:269
-#: app/subnets/addresses/print-address-table.php:270
-#: app/subnets/addresses/print-address-table.php:271
-#: app/subnets/addresses/print-address-table.php:272
-#: app/subnets/addresses/print-address-table.php:273
+#: app/subnets/addresses/print-address-table.php:277
+#: app/subnets/addresses/print-address-table.php:278
+#: app/subnets/addresses/print-address-table.php:279
+#: app/subnets/addresses/print-address-table.php:280
+#: app/subnets/addresses/print-address-table.php:281
 #: app/subnets/addresses/export-subnet.php:154
 #: app/subnets/addresses/export-field-select.php:119
 #: app/dashboard/widgets/inactive-hosts.php:98
@@ -2450,8 +2454,8 @@ msgstr ""
 #: app/subnets/addresses/address-details/address-details.php:198
 #: app/subnets/addresses/address-details/address-details.php:210
 #: app/subnets/addresses/address-details/address-details.php:211
-#: app/subnets/addresses/print-address-table.php:269
-#: app/subnets/addresses/print-address-table.php:270
+#: app/subnets/addresses/print-address-table.php:277
+#: app/subnets/addresses/print-address-table.php:278
 #: app/temp_share/address.php:157
 #: app/temp_share/address.php:171
 #: app/temp_share/address.php:172
@@ -2464,19 +2468,19 @@ msgstr ""
 
 #: functions/classes/class.Tools.php:2042
 #: app/tools/customers/customer/objects/ipaddresses.php:87
-#: app/subnets/addresses/print-address-table.php:271
+#: app/subnets/addresses/print-address-table.php:279
 msgid "Address is alive"
 msgstr ""
 
 #: functions/classes/class.Tools.php:2043
 #: app/tools/customers/customer/objects/ipaddresses.php:88
-#: app/subnets/addresses/print-address-table.php:272
+#: app/subnets/addresses/print-address-table.php:280
 msgid "Address warning"
 msgstr ""
 
 #: functions/classes/class.Tools.php:2045
 #: app/tools/customers/customer/objects/ipaddresses.php:90
-#: app/subnets/addresses/print-address-table.php:274
+#: app/subnets/addresses/print-address-table.php:282
 msgid "Address status unknown"
 msgstr ""
 
@@ -2497,7 +2501,7 @@ msgstr ""
 #: app/subnets/import-subnet/print-file.php:107
 #: app/subnets/subnet-details/subnet-details.php:511
 #: app/subnets/addresses/address-details/address-details.php:260
-#: app/subnets/addresses/print-address-table.php:499
+#: app/subnets/addresses/print-address-table.php:507
 #: app/subnets/subnet-slaves.php:130
 #: app/temp_share/subnet-details.php:126
 #: app/temp_share/subnet-addresses.php:229
@@ -2568,7 +2572,7 @@ msgstr ""
 #: app/subnets/import-subnet/print-file.php:106
 #: app/subnets/subnet-details/subnet-details.php:512
 #: app/subnets/addresses/address-details/address-details.php:261
-#: app/subnets/addresses/print-address-table.php:500
+#: app/subnets/addresses/print-address-table.php:508
 #: app/subnets/subnet-slaves.php:131
 #: app/temp_share/subnet-details.php:127
 #: app/temp_share/subnet-addresses.php:230
@@ -2840,51 +2844,96 @@ msgstr ""
 #: functions/classes/class.User.php:1102
 #: functions/classes/class.FirewallZones.php:687
 #: functions/classes/class.FirewallZones.php:716
-#: js/magic.js:61 js/magic.js:84
-#: js/magic.js:613 js/magic.js:628
-#: js/magic.js:641 js/magic.js:659
-#: js/magic.js:674 js/magic.js:688
-#: js/magic.js:700 js/magic.js:713
-#: js/magic.js:725 js/magic.js:740
-#: js/magic.js:768 js/magic.js:802
-#: js/magic.js:817 js/magic.js:831
-#: js/magic.js:853 js/magic.js:934
-#: js/magic.js:985 js/magic.js:999
-#: js/magic.js:1011 js/magic.js:1022
-#: js/magic.js:1032 js/magic.js:1054
-#: js/magic.js:1182 js/magic.js:1214
-#: js/magic.js:1235 js/magic.js:1372
-#: js/magic.js:1382 js/magic.js:1396
-#: js/magic.js:1405 js/magic.js:1427
-#: js/magic.js:1448 js/magic.js:1458
-#: js/magic.js:1493 js/magic.js:1512
-#: js/magic.js:1544 js/magic.js:1587
-#: js/magic.js:1615 js/magic.js:1634
-#: js/magic.js:1660 js/magic.js:1680
-#: js/magic.js:1687 js/magic.js:1701
-#: js/magic.js:1727 js/magic.js:1746
-#: js/magic.js:1800 js/magic.js:1813
-#: js/magic.js:1823 js/magic.js:1833
-#: js/magic.js:1844 js/magic.js:1919
-#: js/magic.js:1931 js/magic.js:1961
-#: js/magic.js:1971 js/magic.js:1990
-#: js/magic.js:2000 js/magic.js:2027
-#: js/magic.js:2043 js/magic.js:2061
-#: js/magic.js:2075 js/magic.js:2094
-#: js/magic.js:2139 js/magic.js:2151
-#: js/magic.js:2167 js/magic.js:2347
-#: js/magic.js:2366 js/magic.js:2498
-#: js/magic.js:2516 js/magic.js:2536
-#: js/magic.js:2547 js/magic.js:2560
-#: js/magic.js:2571 js/magic.js:2581
-#: js/magic.js:2596 js/magic.js:2605
-#: js/magic.js:2621 js/magic.js:2667
-#: js/magic.js:2672 js/magic.js:2807
-#: js/magic.js:2812 js/magic.js:2840
-#: js/magic.js:2845 js/magic.js:2871
-#: js/magic.js:2876 js/magic.js:2887
-#: js/magic.js:2901 js/magic.js:2921
-#: js/magic.js:2933 js/magic.js:2947
+#: js/magic.js:61
+#: js/magic.js:84
+#: js/magic.js:613
+#: js/magic.js:628
+#: js/magic.js:641
+#: js/magic.js:659
+#: js/magic.js:674
+#: js/magic.js:688
+#: js/magic.js:700
+#: js/magic.js:713
+#: js/magic.js:725
+#: js/magic.js:740
+#: js/magic.js:768
+#: js/magic.js:802
+#: js/magic.js:817
+#: js/magic.js:831
+#: js/magic.js:853
+#: js/magic.js:934
+#: js/magic.js:985
+#: js/magic.js:999
+#: js/magic.js:1011
+#: js/magic.js:1022
+#: js/magic.js:1032
+#: js/magic.js:1054
+#: js/magic.js:1182
+#: js/magic.js:1214
+#: js/magic.js:1235
+#: js/magic.js:1372
+#: js/magic.js:1382
+#: js/magic.js:1396
+#: js/magic.js:1405
+#: js/magic.js:1427
+#: js/magic.js:1448
+#: js/magic.js:1458
+#: js/magic.js:1493
+#: js/magic.js:1512
+#: js/magic.js:1544
+#: js/magic.js:1587
+#: js/magic.js:1615
+#: js/magic.js:1634
+#: js/magic.js:1660
+#: js/magic.js:1680
+#: js/magic.js:1687
+#: js/magic.js:1701
+#: js/magic.js:1727
+#: js/magic.js:1746
+#: js/magic.js:1800
+#: js/magic.js:1813
+#: js/magic.js:1823
+#: js/magic.js:1833
+#: js/magic.js:1844
+#: js/magic.js:1919
+#: js/magic.js:1931
+#: js/magic.js:1961
+#: js/magic.js:1971
+#: js/magic.js:1990
+#: js/magic.js:2000
+#: js/magic.js:2027
+#: js/magic.js:2043
+#: js/magic.js:2061
+#: js/magic.js:2075
+#: js/magic.js:2094
+#: js/magic.js:2139
+#: js/magic.js:2151
+#: js/magic.js:2167
+#: js/magic.js:2347
+#: js/magic.js:2366
+#: js/magic.js:2498
+#: js/magic.js:2516
+#: js/magic.js:2536
+#: js/magic.js:2547
+#: js/magic.js:2560
+#: js/magic.js:2571
+#: js/magic.js:2581
+#: js/magic.js:2596
+#: js/magic.js:2605
+#: js/magic.js:2621
+#: js/magic.js:2667
+#: js/magic.js:2672
+#: js/magic.js:2807
+#: js/magic.js:2812
+#: js/magic.js:2840
+#: js/magic.js:2845
+#: js/magic.js:2871
+#: js/magic.js:2876
+#: js/magic.js:2887
+#: js/magic.js:2901
+#: js/magic.js:2921
+#: js/magic.js:2933
+#: js/magic.js:2947
 #: app/upgrade/index.php:141
 #: app/tools/vrf/index.php:22
 #: app/subnets/addresses/address-modify-submit.php:259
@@ -3530,8 +3579,8 @@ msgstr ""
 #: app/tools/dhcp/leases.php:65
 #: app/tools/multicast-networks/index.php:194
 #: app/subnets/import-subnet/print-file.php:55
-#: app/subnets/addresses/print-address-table.php:160
-#: app/subnets/addresses/print-address-table.php:612
+#: app/subnets/addresses/print-address-table.php:168
+#: app/subnets/addresses/print-address-table.php:620
 #: app/subnets/scan/subnet-scan-execute-snmp-mac.php:231
 #: app/subnets/scan/subnet-scan-execute-scan-snmp-arp.php:149
 #: app/temp_share/subnet-addresses.php:197
@@ -3792,7 +3841,7 @@ msgstr ""
 #: app/subnets/addresses/address-details/address-details-multicast.php:37
 #: app/subnets/addresses/address-details/address-details-linked.php:33
 #: app/subnets/addresses/address-details/address-details.php:98
-#: app/subnets/addresses/print-address-table.php:151
+#: app/subnets/addresses/print-address-table.php:159
 #: app/subnets/addresses/export-field-select.php:67
 #: app/subnets/addresses/mail-notify.php:57
 #: app/subnets/scan/subnet-scan-execute-scan-icmp.php:87
@@ -3835,51 +3884,96 @@ msgstr ""
 msgid "Changelogs cleared successfully"
 msgstr ""
 
-#: js/magic.js:61 js/magic.js:84
-#: js/magic.js:613 js/magic.js:628
-#: js/magic.js:641 js/magic.js:659
-#: js/magic.js:674 js/magic.js:688
-#: js/magic.js:700 js/magic.js:713
-#: js/magic.js:725 js/magic.js:740
-#: js/magic.js:768 js/magic.js:802
-#: js/magic.js:817 js/magic.js:831
-#: js/magic.js:853 js/magic.js:934
-#: js/magic.js:985 js/magic.js:999
-#: js/magic.js:1011 js/magic.js:1022
-#: js/magic.js:1032 js/magic.js:1054
-#: js/magic.js:1182 js/magic.js:1214
-#: js/magic.js:1235 js/magic.js:1372
-#: js/magic.js:1382 js/magic.js:1396
-#: js/magic.js:1405 js/magic.js:1427
-#: js/magic.js:1448 js/magic.js:1458
-#: js/magic.js:1493 js/magic.js:1512
-#: js/magic.js:1544 js/magic.js:1587
-#: js/magic.js:1615 js/magic.js:1634
-#: js/magic.js:1660 js/magic.js:1680
-#: js/magic.js:1687 js/magic.js:1701
-#: js/magic.js:1727 js/magic.js:1746
-#: js/magic.js:1800 js/magic.js:1813
-#: js/magic.js:1823 js/magic.js:1833
-#: js/magic.js:1844 js/magic.js:1919
-#: js/magic.js:1931 js/magic.js:1961
-#: js/magic.js:1971 js/magic.js:1990
-#: js/magic.js:2000 js/magic.js:2027
-#: js/magic.js:2043 js/magic.js:2061
-#: js/magic.js:2075 js/magic.js:2094
-#: js/magic.js:2139 js/magic.js:2151
-#: js/magic.js:2167 js/magic.js:2347
-#: js/magic.js:2366 js/magic.js:2498
-#: js/magic.js:2516 js/magic.js:2536
-#: js/magic.js:2547 js/magic.js:2560
-#: js/magic.js:2571 js/magic.js:2581
-#: js/magic.js:2596 js/magic.js:2605
-#: js/magic.js:2621 js/magic.js:2667
-#: js/magic.js:2672 js/magic.js:2807
-#: js/magic.js:2812 js/magic.js:2840
-#: js/magic.js:2845 js/magic.js:2871
-#: js/magic.js:2876 js/magic.js:2887
-#: js/magic.js:2901 js/magic.js:2921
-#: js/magic.js:2933 js/magic.js:2947
+#: js/magic.js:61
+#: js/magic.js:84
+#: js/magic.js:613
+#: js/magic.js:628
+#: js/magic.js:641
+#: js/magic.js:659
+#: js/magic.js:674
+#: js/magic.js:688
+#: js/magic.js:700
+#: js/magic.js:713
+#: js/magic.js:725
+#: js/magic.js:740
+#: js/magic.js:768
+#: js/magic.js:802
+#: js/magic.js:817
+#: js/magic.js:831
+#: js/magic.js:853
+#: js/magic.js:934
+#: js/magic.js:985
+#: js/magic.js:999
+#: js/magic.js:1011
+#: js/magic.js:1022
+#: js/magic.js:1032
+#: js/magic.js:1054
+#: js/magic.js:1182
+#: js/magic.js:1214
+#: js/magic.js:1235
+#: js/magic.js:1372
+#: js/magic.js:1382
+#: js/magic.js:1396
+#: js/magic.js:1405
+#: js/magic.js:1427
+#: js/magic.js:1448
+#: js/magic.js:1458
+#: js/magic.js:1493
+#: js/magic.js:1512
+#: js/magic.js:1544
+#: js/magic.js:1587
+#: js/magic.js:1615
+#: js/magic.js:1634
+#: js/magic.js:1660
+#: js/magic.js:1680
+#: js/magic.js:1687
+#: js/magic.js:1701
+#: js/magic.js:1727
+#: js/magic.js:1746
+#: js/magic.js:1800
+#: js/magic.js:1813
+#: js/magic.js:1823
+#: js/magic.js:1833
+#: js/magic.js:1844
+#: js/magic.js:1919
+#: js/magic.js:1931
+#: js/magic.js:1961
+#: js/magic.js:1971
+#: js/magic.js:1990
+#: js/magic.js:2000
+#: js/magic.js:2027
+#: js/magic.js:2043
+#: js/magic.js:2061
+#: js/magic.js:2075
+#: js/magic.js:2094
+#: js/magic.js:2139
+#: js/magic.js:2151
+#: js/magic.js:2167
+#: js/magic.js:2347
+#: js/magic.js:2366
+#: js/magic.js:2498
+#: js/magic.js:2516
+#: js/magic.js:2536
+#: js/magic.js:2547
+#: js/magic.js:2560
+#: js/magic.js:2571
+#: js/magic.js:2581
+#: js/magic.js:2596
+#: js/magic.js:2605
+#: js/magic.js:2621
+#: js/magic.js:2667
+#: js/magic.js:2672
+#: js/magic.js:2807
+#: js/magic.js:2812
+#: js/magic.js:2840
+#: js/magic.js:2845
+#: js/magic.js:2871
+#: js/magic.js:2876
+#: js/magic.js:2887
+#: js/magic.js:2901
+#: js/magic.js:2921
+#: js/magic.js:2933
+#: js/magic.js:2947
 #: app/tools/circuits/physical-circuits/all-circuits.php:56
 #: app/tools/circuits/physical-circuits/circuit-details-general.php:34
 #: app/tools/circuits/providers/provider-details.php:137
@@ -3913,16 +4007,17 @@ msgstr ""
 msgid "Passkey authentication successfull"
 msgstr ""
 
-#: js/login.js:227 js/login.js:234
+#: js/login.js:227
+#: js/login.js:234
 msgid "Passkey authentication failed!"
 msgstr ""
 
-#: js/bootstrap-table/bootstrap-table.min.js:8
+#: js/bootstrap-table/bootstrap-table.min.js:7
 #, javascript-format
 msgid "Showing %s to %s of %s rows"
 msgstr ""
 
-#: js/bootstrap-table/bootstrap-table.min.js:8
+#: js/bootstrap-table/bootstrap-table.min.js:7
 msgid "Columns"
 msgstr ""
 
@@ -4165,7 +4260,7 @@ msgstr ""
 #: app/subnets/import-subnet/print-file.php:56
 #: app/subnets/addresses/address-modify.php:480
 #: app/subnets/addresses/address-details/address-details.php:133
-#: app/subnets/addresses/print-address-table.php:167
+#: app/subnets/addresses/print-address-table.php:175
 #: app/subnets/addresses/export-field-select.php:85
 #: app/temp_share/subnet-addresses.php:100
 #: app/temp_share/address.php:101
@@ -4611,7 +4706,7 @@ msgstr ""
 #: app/subnets/addresses/address-modify.php:551
 #: app/subnets/addresses/address-details-index.php:109
 #: app/subnets/addresses/address-details/address-details.php:171
-#: app/subnets/addresses/print-address-table.php:166
+#: app/subnets/addresses/print-address-table.php:174
 #: app/subnets/addresses/export-field-select.php:112
 #: app/admin/import-export/import-template.php:63
 #: app/admin/locations/edit-result.php:83
@@ -4630,12 +4725,14 @@ msgstr ""
 #: app/tools/circuits/physical-circuits/circuit-details-general.php:16
 #: app/admin/circuits/edit-circuit.php:148
 #: app/admin/circuits/edit-circuit-submit.php:54
+#: app/admin/circuits/edit-circuit-submit.php:60
 msgid "Inactive"
 msgstr ""
 
 #: app/tools/circuits/physical-circuits/circuit-details-general.php:17
 #: app/admin/circuits/edit-circuit.php:148
 #: app/admin/circuits/edit-circuit-submit.php:54
+#: app/admin/circuits/edit-circuit-submit.php:59
 #: app/admin/widgets/index.php:43
 #: app/admin/widgets/edit.php:88
 msgid "Active"
@@ -5439,7 +5536,7 @@ msgstr ""
 #: app/subnets/addresses/address-modify.php:536
 #: app/subnets/addresses/address-modify.php:538
 #: app/subnets/addresses/address-details/address-details.php:164
-#: app/subnets/addresses/print-address-table.php:165
+#: app/subnets/addresses/print-address-table.php:173
 #: app/subnets/addresses/export-field-select.php:99
 #: app/subnets/addresses/mail-notify.php:86
 #: app/subnets/scan/subnet-scan-execute-snmp-mac.php:234
@@ -5473,8 +5570,8 @@ msgstr ""
 #: app/subnets/subnet-details/subnet-details.php:704
 #: app/subnets/addresses/address-details/address-details.php:347
 #: app/subnets/addresses/address-details/address-details.php:373
-#: app/subnets/addresses/print-address-table.php:540
-#: app/subnets/addresses/print-address-table.php:560
+#: app/subnets/addresses/print-address-table.php:548
+#: app/subnets/addresses/print-address-table.php:568
 msgid "Send mail notification"
 msgstr ""
 
@@ -5482,7 +5579,7 @@ msgstr ""
 #: app/tools/duplicates/index.php:194
 #: app/subnets/addresses/address-details/address-details.php:340
 #: app/subnets/addresses/address-details/address-details.php:351
-#: app/subnets/addresses/print-address-table.php:523
+#: app/subnets/addresses/print-address-table.php:531
 msgid "Delete IP address"
 msgstr ""
 
@@ -5490,8 +5587,8 @@ msgstr ""
 #: app/tools/multicast-networks/index.php:260
 #: app/subnets/addresses/address-details/address-details.php:362
 #: app/subnets/addresses/address-details/address-details.php:370
-#: app/subnets/addresses/print-address-table.php:549
 #: app/subnets/addresses/print-address-table.php:557
+#: app/subnets/addresses/print-address-table.php:565
 msgid "Edit IP address details (disabled)"
 msgstr ""
 
@@ -5499,8 +5596,8 @@ msgstr ""
 #: app/tools/multicast-networks/index.php:264
 #: app/subnets/addresses/address-details/address-details.php:366
 #: app/subnets/addresses/address-details/address-details.php:374
-#: app/subnets/addresses/print-address-table.php:553
 #: app/subnets/addresses/print-address-table.php:561
+#: app/subnets/addresses/print-address-table.php:569
 msgid "Delete IP address (disabled)"
 msgstr ""
 
@@ -5890,7 +5987,7 @@ msgid "Note"
 msgstr ""
 
 #: app/tools/customers/customer/objects/ipaddresses.php:102
-#: app/subnets/addresses/print-address-table.php:372
+#: app/subnets/addresses/print-address-table.php:380
 #: app/temp_share/subnet-addresses.php:185
 msgid "Address is marked as gateway"
 msgstr ""
@@ -5917,8 +6014,8 @@ msgstr ""
 #: app/subnets/addresses/address-modify.php:200
 #: app/subnets/addresses/address-details/address-details.php:345
 #: app/subnets/addresses/address-details/address-details.php:371
-#: app/subnets/addresses/print-address-table.php:538
-#: app/subnets/addresses/print-address-table.php:558
+#: app/subnets/addresses/print-address-table.php:546
+#: app/subnets/addresses/print-address-table.php:566
 msgid "Check availability"
 msgstr ""
 
@@ -6013,6 +6110,7 @@ msgstr ""
 #: app/tools/customers/customer/objects/routing_bgp.php:32
 #: app/tools/routing/bgp/all.php:42
 #: app/tools/routing/bgp/details-general.php:66
+#: app/admin/import-export/export-bgp.php:87
 #: app/admin/routing/edit-bgp-mapping.php:58
 #: app/admin/routing/edit-bgp.php:201
 #: app/admin/routing/edit-bgp.php:203
@@ -6717,8 +6815,8 @@ msgstr ""
 #: app/subnets/addresses/address-details-index.php:99
 #: app/admin/custom-fields/index.php:29
 #: app/admin/admin-menu-config.php:43
-#: app/admin/nat/edit-result.php:82
-#: app/admin/nat/edit-result.php:85
+#: app/admin/nat/edit-result.php:91
+#: app/admin/nat/edit-result.php:94
 #: app/admin/nat/edit.php:51
 msgid "NAT"
 msgstr ""
@@ -7394,8 +7492,9 @@ msgid "BGP Routing details"
 msgstr ""
 
 #: app/tools/routing/bgp/details-general.php:33
+#: app/admin/import-export/export-bgp.php:99
 #: app/admin/circuits/edit-circuit.php:78
-#: app/admin/circuits/edit-circuit-submit.php:133
+#: app/admin/circuits/edit-circuit-submit.php:142
 #: app/admin/routing/edit-bgp.php:126
 msgid "Circuit"
 msgstr ""
@@ -7707,7 +7806,7 @@ msgid "Device status unknown"
 msgstr ""
 
 #: app/tools/multicast-networks/index.php:170
-#: app/subnets/addresses/print-address-table.php:416
+#: app/subnets/addresses/print-address-table.php:424
 msgid "Duplicate MAC"
 msgstr ""
 
@@ -7715,13 +7814,13 @@ msgstr ""
 #: app/tools/multicast-networks/index.php:262
 #: app/subnets/addresses/address-details/address-details.php:346
 #: app/subnets/addresses/address-details/address-details.php:372
-#: app/subnets/addresses/print-address-table.php:539
-#: app/subnets/addresses/print-address-table.php:559
+#: app/subnets/addresses/print-address-table.php:547
+#: app/subnets/addresses/print-address-table.php:567
 msgid "Search same hostnames in db"
 msgstr ""
 
 #: app/tools/multicast-networks/index.php:255
-#: app/subnets/addresses/print-address-table.php:541
+#: app/subnets/addresses/print-address-table.php:549
 msgid "Generate or regenerate a firewall address object of this ip address."
 msgstr ""
 
@@ -8830,12 +8929,12 @@ msgstr ""
 #: app/admin/circuits/edit-provider-submit.php:53
 #: app/admin/circuits/edit-logical-circuit-submit.php:102
 #: app/admin/circuits/edit-logical-circuit-submit.php:106
-#: app/admin/circuits/edit-circuit-submit.php:133
+#: app/admin/circuits/edit-circuit-submit.php:142
 #: app/admin/customers/edit-submit.php:91
 #: app/admin/locations/edit-result.php:86
 #: app/admin/devices/edit-result.php:100
 #: app/admin/routing/edit-bgp-mapping-submit.php:31
-#: app/admin/routing/edit-bgp-submit.php:82
+#: app/admin/routing/edit-bgp-submit.php:95
 #: app/admin/users/edit-result.php:173
 #: app/admin/racks/edit-result.php:118
 #: app/admin/nameservers/edit-result.php:75
@@ -8846,7 +8945,7 @@ msgstr ""
 #: app/admin/device-types/edit-result.php:40
 #: app/admin/powerDNS/domain-edit-result.php:107
 #: app/admin/sections/edit-result.php:115
-#: app/admin/nat/edit-result.php:85
+#: app/admin/nat/edit-result.php:94
 msgid "successful"
 msgstr ""
 
@@ -8982,7 +9081,7 @@ msgstr ""
 
 #: app/tools/pstn-prefixes/single-prefix-numbers.php:99
 #: app/subnets/addresses/address-modify-submit.php:259
-#: app/subnets/addresses/print-address-table.php:248
+#: app/subnets/addresses/print-address-table.php:256
 msgid "range"
 msgstr ""
 
@@ -9235,16 +9334,22 @@ msgid "Dst Port"
 msgstr ""
 
 #: app/tools/nat/all_nats.php:90
+#: app/admin/nat/edit-result.php:41
+#: app/admin/nat/edit-result.php:49
 #: app/admin/nat/edit.php:79
 msgid "source"
 msgstr ""
 
 #: app/tools/nat/all_nats.php:90
+#: app/admin/nat/edit-result.php:41
+#: app/admin/nat/edit-result.php:50
 #: app/admin/nat/edit.php:79
 msgid "static"
 msgstr ""
 
 #: app/tools/nat/all_nats.php:90
+#: app/admin/nat/edit-result.php:41
+#: app/admin/nat/edit-result.php:51
 #: app/admin/nat/edit.php:79
 msgid "destination"
 msgstr ""
@@ -9468,7 +9573,7 @@ msgid "Invalid subnet ID"
 msgstr ""
 
 #: app/subnets/import-subnet/print-file.php:54
-#: app/subnets/addresses/print-address-table.php:154
+#: app/subnets/addresses/print-address-table.php:162
 msgid "FW object"
 msgstr ""
 
@@ -10029,7 +10134,7 @@ msgid "No changelog entries are available for this host"
 msgstr ""
 
 #: app/subnets/addresses/address-details/address-details-linked.php:13
-#: app/subnets/addresses/print-address-table.php:579
+#: app/subnets/addresses/print-address-table.php:587
 msgid "Addresses linked with"
 msgstr ""
 
@@ -10103,39 +10208,39 @@ msgstr ""
 msgid "Temporary share address"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:137
+#: app/subnets/addresses/print-address-table.php:145
 #, php-format
 msgid "IP addresses in %s"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:138
+#: app/subnets/addresses/print-address-table.php:146
 msgid "Orphaned IP addresses for subnet"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:138
+#: app/subnets/addresses/print-address-table.php:146
 msgid "orphaned"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:138
+#: app/subnets/addresses/print-address-table.php:146
 msgid ""
 "This happens if subnet contained IP addresses when new child subnet was "
 "created"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:138
+#: app/subnets/addresses/print-address-table.php:146
 msgid "Remove all"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:139
+#: app/subnets/addresses/print-address-table.php:147
 #: app/temp_share/subnet-addresses.php:71
 msgid "IP addresses belonging to ALL nested subnets"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:196
+#: app/subnets/addresses/print-address-table.php:204
 msgid " Subnet is marked as full"
 msgstr ""
 
-#: app/subnets/addresses/print-address-table.php:522
+#: app/subnets/addresses/print-address-table.php:530
 msgid "Move to different subnet"
 msgstr ""
 
@@ -12345,6 +12450,30 @@ msgstr ""
 msgid "VRF %s failed."
 msgstr ""
 
+#: app/admin/import-export/export-bgp.php:85
+#: app/admin/circuits/edit-circuit.php:91
+#: app/admin/circuits/edit-logical-circuit.php:193
+msgid "ID"
+msgstr ""
+
+#: app/admin/import-export/export-bgp.php:89
+#: app/admin/routing/edit-bgp.php:195
+msgid "Local Address"
+msgstr ""
+
+#: app/admin/import-export/export-bgp.php:91
+msgid "Peer Name"
+msgstr ""
+
+#: app/admin/import-export/export-bgp.php:93
+#: app/admin/routing/edit-bgp.php:178
+msgid "Peer Address"
+msgstr ""
+
+#: app/admin/import-export/export-bgp.php:95
+msgid "BGP Type"
+msgstr ""
+
 #: app/admin/import-export/import-devices-select.php:33
 msgid "tname"
 msgstr ""
@@ -12862,11 +12991,6 @@ msgstr ""
 msgid "No circuit providers configured."
 msgstr ""
 
-#: app/admin/circuits/edit-circuit.php:91
-#: app/admin/circuits/edit-logical-circuit.php:193
-msgid "ID"
-msgstr ""
-
 #: app/admin/circuits/edit-circuit.php:120
 msgid "Circuit type"
 msgstr ""
@@ -12964,23 +13088,23 @@ msgstr ""
 msgid "Invalid provider"
 msgstr ""
 
-#: app/admin/circuits/edit-circuit-submit.php:60
+#: app/admin/circuits/edit-circuit-submit.php:69
 msgid "Circuit is currently used in a larger logical circuit"
 msgstr ""
 
-#: app/admin/circuits/edit-circuit-submit.php:73
+#: app/admin/circuits/edit-circuit-submit.php:82
 msgid "Invalid device A"
 msgstr ""
 
-#: app/admin/circuits/edit-circuit-submit.php:80
+#: app/admin/circuits/edit-circuit-submit.php:89
 msgid "Invalid location A"
 msgstr ""
 
-#: app/admin/circuits/edit-circuit-submit.php:92
+#: app/admin/circuits/edit-circuit-submit.php:101
 msgid "Invalid device B"
 msgstr ""
 
-#: app/admin/circuits/edit-circuit-submit.php:99
+#: app/admin/circuits/edit-circuit-submit.php:108
 msgid "Invalid location B"
 msgstr ""
 
@@ -14090,23 +14214,19 @@ msgid "BGP peer"
 msgstr ""
 
 #: app/admin/routing/edit-bgp.php:84
+#: app/admin/routing/edit-bgp-submit.php:35
+#: app/admin/routing/edit-bgp-submit.php:41
 msgid "internal"
 msgstr ""
 
 #: app/admin/routing/edit-bgp.php:84
+#: app/admin/routing/edit-bgp-submit.php:35
+#: app/admin/routing/edit-bgp-submit.php:42
 msgid "external"
 msgstr ""
 
 #: app/admin/routing/edit-bgp.php:131
 msgid "Select Circuit"
-msgstr ""
-
-#: app/admin/routing/edit-bgp.php:178
-msgid "Peer Address"
-msgstr ""
-
-#: app/admin/routing/edit-bgp.php:195
-msgid "Local Address"
 msgstr ""
 
 #: app/admin/routing/edit-bgp-submit.php:28
@@ -14125,32 +14245,36 @@ msgstr ""
 msgid "Invalid peer address"
 msgstr ""
 
-#: app/admin/routing/edit-bgp-submit.php:39
+#: app/admin/routing/edit-bgp-submit.php:37
+msgid "Invalid BGP type"
+msgstr ""
+
+#: app/admin/routing/edit-bgp-submit.php:52
 msgid "Insufficient permissions for module VRF"
 msgstr ""
 
-#: app/admin/routing/edit-bgp-submit.php:40
+#: app/admin/routing/edit-bgp-submit.php:53
 msgid "Invalid VRF ID"
 msgstr ""
 
-#: app/admin/routing/edit-bgp-submit.php:43
+#: app/admin/routing/edit-bgp-submit.php:56
 msgid "Insufficient permissions for module Circuits"
 msgstr ""
 
-#: app/admin/routing/edit-bgp-submit.php:44
+#: app/admin/routing/edit-bgp-submit.php:57
 msgid "Invalid Circuits ID"
 msgstr ""
 
-#: app/admin/routing/edit-bgp-submit.php:47
+#: app/admin/routing/edit-bgp-submit.php:60
 msgid "Insufficient permissions for module Customers"
 msgstr ""
 
-#: app/admin/routing/edit-bgp-submit.php:48
+#: app/admin/routing/edit-bgp-submit.php:61
 msgid "Invalid Customer ID"
 msgstr ""
 
-#: app/admin/routing/edit-bgp-submit.php:79
-#: app/admin/routing/edit-bgp-submit.php:82
+#: app/admin/routing/edit-bgp-submit.php:92
+#: app/admin/routing/edit-bgp-submit.php:95
 msgid "BGP"
 msgstr ""
 
@@ -18638,7 +18762,10 @@ msgstr ""
 msgid "Shows quick access to tools menu"
 msgstr ""
 
-#: db/SCHEMA.sql:587 app/dashboard/widgets/tools.php:24 app/tools/ip-calculator/index.php:16 app/tools/tools-menu-config.php:78
+#: db/SCHEMA.sql:587 
+#app/dashboard/widgets/tools.php:24
+#app/tools/ip-calculator/index.php:16
+#app/tools/tools-menu-config.php:78
 msgid "IP Calculator"
 msgstr ""
 
@@ -18887,25 +19014,25 @@ msgstr ""
 msgid "passkeys"
 msgstr ""
 
-#: /var/www/html/phpipam/app/admin/powerDNS/index.php:51
+#: app/admin/powerDNS/index.php:51
 msgid "domains"
 msgstr ""
 
-# /var/www/phpipam/app/tools/powerDNS/index.php:48
-#: /var/www/html/phpipam/app/admin/powerDNS/index.php:51
+# app/tools/powerDNS/index.php:48
+#: app/admin/powerDNS/index.php:51
 msgid "host_records"
 msgstr ""
 
-# /var/www/phpipam/app/tools/powerDNS/index.php:48
-#: /var/www/html/phpipam/app/admin/powerDNS/index.php:51
+# app/tools/powerDNS/index.php:48
+#: app/admin/powerDNS/index.php:51
 msgid "reverse_v4"
 msgstr ""
 
-# /var/www/phpipam/app/tools/powerDNS/index.php:48
-#: /var/www/html/phpipam/app/admin/powerDNS/index.php:51
+# app/tools/powerDNS/index.php:48
+#: app/admin/powerDNS/index.php:51
 msgid "reverse_v6"
 msgstr ""
 
-#: /var/www/html/phpipam/app/admin/powerDNS/index.php:51
+#: app/admin/powerDNS/index.php:51
 msgid "defaults"
 msgstr ""
