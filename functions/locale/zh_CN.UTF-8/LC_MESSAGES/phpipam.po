@@ -4182,7 +4182,7 @@ msgstr "主机名"
 #: app/admin/customers/edit.php:87
 #: app/admin/requests/edit.php:149
 msgid "State"
-msgstr "状态"
+msgstr "省份"
 
 #: app/tools/request-ip/index.php:88
 #: app/tools/search/search_results/search-results_addresses.php:43
@@ -13336,7 +13336,7 @@ msgstr "无效城市"
 
 #: app/admin/customers/edit-submit.php:49
 msgid "Invalid State"
-msgstr "无效状态"
+msgstr "无效省份"
 
 #: app/admin/customers/edit-submit.php:51
 msgid "Invalid Postcode"
