@@ -80,12 +80,12 @@ function addAllCircuitsHandlers(){
 		//var id = row_clone.find("td:last input").val();
 		row.find("td:first").remove();
 
-		row.prepend("<td><a name='rembtn' class='btn btn-xs btn-default btn-danger' rel='tooltip' title='Remove'><i class='fa fa-times'></i></a></td>");
+		row.prepend("<td><a name='rembtn' class='btn btn-xs btn-default btn-danger' rel='tooltip' title='<?php print _('Remove'); ?>'><i class='fa fa-times'></i></a></td>");
 		row.append("\
 							 <td><input class='id' type='hidden' value='"+ id +"'> \
 <div class='input-group pull-right'> \
-<a name='mvdnbtn' class='btn btn-xs btn-default' rel='tooltip' title='Move down'><i class='fa fa-angle-down'></i></a>\
-<a name='mvupbtn' class='btn btn-xs btn-default' rel='tooltip' title='Move up'><i class='fa fa-angle-up'></i></a>\
+<a name='mvdnbtn' class='btn btn-xs btn-default' rel='tooltip' title='<?php print _('Move down'); ?>'><i class='fa fa-angle-down'></i></a>\
+<a name='mvupbtn' class='btn btn-xs btn-default' rel='tooltip' title='<?php print _('Move up'); ?>'><i class='fa fa-angle-up'></i></a>\
 \
 </div>\
 							 </td> \
