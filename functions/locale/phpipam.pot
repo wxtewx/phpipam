@@ -19036,6 +19036,12 @@ msgstr ""
 msgid "passkeys"
 msgstr ""
 
+msgid "Success"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
 #: app/admin/powerDNS/index.php:51
 msgid "domains"
 msgstr ""
