@@ -1,37 +1,56 @@
 <?php
 
-/**
- * Detect missing gettext and fake function
- */
+// Fallback for missing gettext functions
 if(!function_exists('gettext')) {
-	function gettext ($text) 	{ return $text; }
-	function _($text) 			{ return $text; }
+    function gettext($text) { return $text; }
+    function _($text) { return $text; }
 }
 
-// International translation function, supports variable replacement
-function tr_($text, ...$vars) {
-    $translated = gettext($text); // or gettext($text), both are equivalent
-	// Support variable replacement, including date and array processing
-	foreach ($vars as &$value) {
-		if ($value instanceof DateTime) {
-			// Handles DateTime objects, the default format is 'Y-m-d H:i:s'
-			$value = $value->format('Y-m-d H:i:s');
-		} elseif (is_array($value)) {
-			// Convert an array to a string
-			$value = implode(', ', $value);
-		} elseif (is_callable($value)) {
-			// If it is a PHP function, call it and get its result
-			$value = $value();
-		}
-	}
-    // Replace placeholder
-	 // Replace the placeholder %s or %d
-	 $translated = vsprintf($translated, $vars);
-
-	 // Return the processed result
-	 return $translated;
+// Context-aware translation function
+if (!function_exists('pgettext')) {
+    function pgettext(string $context, string $message): string {
+        $key = "{$context}\x04{$message}";
+        // Prioritize context translation
+        if (($contextTranslation = dcgettext(textdomain(null), $key, LC_MESSAGES)) !== $key && $contextTranslation) {
+            return $contextTranslation;
+        }
+        // Fallback to normal translation
+        return gettext($message);
+    }
 }
 
+/**
+ * Enhanced internationalization translation function
+ * Supports context (polysemy), variable replacement and type handling
+ * 
+ * @param string $text Original text to translate (e.g. "State")
+ * @param string|null $context Context for polysemy (e.g. "status"/"region", optional)
+ * @param mixed ...$vars Variables for placeholder replacement (supports DateTime/array/callable)
+ * @return string Final translated result
+ */
+function tr_($text, ...$args) {
+    $context = null;
+    $actualVars = $args;
+
+    // Distinguish context/vars by %s presence
+    if (strpos($text, '%s') === false && !empty($actualVars)) {
+        $context = array_shift($actualVars);
+    }
+
+    // Get translation
+    $translated = $context ? pgettext($context, $text) : gettext($text);
+
+    // Process variables
+    foreach ($actualVars as &$v) {
+        if ($v instanceof DateTime) $v = $v->format('Y-m-d H:i:s');
+        elseif (is_array($v)) $v = implode(', ', $v);
+        elseif (is_callable($v) || is_object($v) || $v === null) $v = (string)$v;
+    }
+
+    // Force placeholder replacement
+    $actualVars = array_pad($actualVars, substr_count($translated, '%s'), '');
+    return @vsprintf($translated, $actualVars);
+}
 /**
  * Disable php errors on output scripts (json,xml,crt,sql...)
  */
