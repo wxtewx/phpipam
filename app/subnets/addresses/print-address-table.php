@@ -402,7 +402,7 @@ else {
 				}
 
 				# print description - mandatory
-	        													  		  print "<td class='description'>"._($addresses[$n]->description)."</td>";
+	        													  		  print "<td class='description'>"._($addresses[$n]->description ?? "")."</td>";
 				# Print mac address icon!
 				if(in_array('mac', $selected_ip_fields)) {
                     # normalize MAC address
