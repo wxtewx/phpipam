@@ -130,6 +130,14 @@ if(in_array('firewallAddressObject', $selected_ip_fields)) {
 }
 ?>
 
+<?php
+// 在文件最开头添加错误报告
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+?>
+
+
 <!-- print title and pagenum -->
 <h4 style="margin-top:40px;">
 <?php
@@ -394,7 +402,7 @@ else {
 				}
 
 				# print description - mandatory
-	        													  		  print "<td class='description'>"._($addresses[$n]->description)."</td>";
+	        													  		  print "<td class='description'>"._($addresses[$n]->description ?? "")."</td>";
 				# Print mac address icon!
 				if(in_array('mac', $selected_ip_fields)) {
                     # normalize MAC address
