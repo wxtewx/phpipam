@@ -57,6 +57,7 @@ msgstr ""
 #: functions/classes/class.Tools.php:2023
 #: app/tools/locations/single-location.php:190
 #: app/tools/racks/print-single-rack.php:237
+#: app/admin/circuits/edit-logical-circuit.php:83
 #: app/admin/circuits/edit-logical-circuit.php:297
 msgid "Remove"
 msgstr ""
@@ -2701,6 +2702,7 @@ msgstr ""
 #: functions/classes/class.Tools.php:3218
 #: app/tools/search/search-results-export.php:134
 #: app/tools/devices/index.php:58
+#: app/tools/devices/device-details/device-pstn.php:93
 #: app/tools/devices/device-details/device-details.php:216
 #: app/tools/devices/device-details/device-details.php:217
 #: app/admin/nat/item-add-search.php:85
@@ -3778,15 +3780,15 @@ msgstr ""
 msgid "Lastest version can be downloaded from "
 msgstr ""
 
-#: functions/global_functions.php:127
+#: functions/global_functions.php:146
 msgid "Required PHP extension not installed: "
 msgstr ""
 
-#: functions/global_functions.php:139
+#: functions/global_functions.php:158
 msgid "Required function disabled"
 msgstr ""
 
-#: functions/global_functions.php:141
+#: functions/global_functions.php:160
 msgid "Required function not found: "
 msgstr ""
 
@@ -3980,7 +3982,7 @@ msgstr ""
 #: app/tools/search/search_results/search-results_circuits.php:37
 #: app/tools/search/search-results-export.php:493
 #: app/tools/customers/customer/objects/circuits.php:42
-#: app/tools/devices/device-details/device-circuits.php:55
+#: app/tools/devices/device-details/device-circuits.php:57
 #: app/tools/vaults/all-vaults.php:47
 #: app/tools/vaults/vault/vault-details-general.php:74
 #: app/tools/vaults/vault/vault-items-certificates.php:27
@@ -4242,7 +4244,6 @@ msgstr ""
 #: app/tools/dhcp/leases.php:70
 #: app/tools/pstn-prefixes/single-prefix-numbers.php:24
 #: app/login/request_ip_form.php:83
-#: app/admin/customers/edit.php:87
 #: app/admin/requests/edit.php:149
 msgid "State"
 msgstr ""
@@ -4414,6 +4415,7 @@ msgid "Circuit Type Legend"
 msgstr ""
 
 #: app/tools/circuits/all-circuits-map.php:79
+#: app/tools/circuits/logical-circuits/logical-circuit-details-map.php:72
 #: app/tools/circuits/options.php:29
 #, php-format
 msgid "(%s Line)"
@@ -4445,7 +4447,7 @@ msgstr ""
 #: app/tools/circuits/logical-circuits/logical-circuits.php:50
 #: app/tools/search/search_results/search-results_circuits.php:33
 #: app/tools/customers/customer/objects/circuits.php:38
-#: app/tools/devices/device-details/device-circuits.php:51
+#: app/tools/devices/device-details/device-circuits.php:53
 #: app/admin/circuits/edit-circuit.php:89
 #: app/admin/circuits/edit-logical-circuit.php:191
 #: app/admin/circuits/edit-logical-circuit.php:267
@@ -4482,7 +4484,7 @@ msgstr ""
 #: app/tools/search/search_results/search-results_circuits.php:34
 #: app/tools/search/search-results-export.php:490
 #: app/tools/customers/customer/objects/circuits.php:39
-#: app/tools/devices/device-details/device-circuits.php:52
+#: app/tools/devices/device-details/device-circuits.php:54
 #: app/admin/circuits/edit-circuit.php:103
 #: app/admin/circuits/edit-provider-submit.php:53
 msgid "Provider"
@@ -4510,7 +4512,7 @@ msgstr ""
 #: app/tools/customers/customer/objects/circuits.php:40
 #: app/tools/devices/all-devices.php:92
 #: app/tools/devices/device-details/device-details.php:54
-#: app/tools/devices/device-details/device-circuits.php:53
+#: app/tools/devices/device-details/device-circuits.php:55
 #: app/tools/vaults/vault/vault-details-general.php:38
 #: app/tools/firewall-zones/index.php:44
 #: app/tools/powerDNS/domain-records.php:132
@@ -4539,7 +4541,7 @@ msgstr ""
 #: app/tools/search/search_results/search-results_circuits.php:36
 #: app/tools/search/search-results-export.php:492
 #: app/tools/customers/customer/objects/circuits.php:41
-#: app/tools/devices/device-details/device-circuits.php:54
+#: app/tools/devices/device-details/device-circuits.php:56
 #: app/admin/circuits/edit-circuit.php:135
 #: app/admin/circuits/edit-circuit.php:137
 msgid "Capacity"
@@ -4550,7 +4552,7 @@ msgstr ""
 #: app/tools/circuits/providers/provider-details.php:138
 #: app/tools/circuits/logical-circuits/logical-circuit-details-members.php:131
 #: app/tools/customers/customer/objects/circuits.php:43
-#: app/tools/devices/device-details/device-circuits.php:57
+#: app/tools/devices/device-details/device-circuits.php:59
 #: app/admin/circuits/edit-circuit.php:193
 #: app/admin/circuits/edit-logical-circuit.php:269
 #: app/admin/circuits/edit-logical-circuit.php:333
@@ -4562,7 +4564,7 @@ msgstr ""
 #: app/tools/circuits/providers/provider-details.php:139
 #: app/tools/circuits/logical-circuits/logical-circuit-details-members.php:132
 #: app/tools/customers/customer/objects/circuits.php:44
-#: app/tools/devices/device-details/device-circuits.php:58
+#: app/tools/devices/device-details/device-circuits.php:60
 #: app/admin/circuits/edit-circuit.php:224
 #: app/admin/circuits/edit-logical-circuit.php:270
 #: app/admin/circuits/edit-logical-circuit.php:334
@@ -4879,7 +4881,7 @@ msgid "Provider circuits"
 msgstr ""
 
 #: app/tools/circuits/providers/provider-details.php:124
-#: app/tools/devices/device-details/device-circuits.php:42
+#: app/tools/devices/device-details/device-circuits.php:44
 msgid "No circuits"
 msgstr ""
 
@@ -5062,6 +5064,7 @@ msgstr ""
 
 #: app/tools/circuits/options.php:128
 #: app/admin/custom-fields/index.php:113
+#: app/admin/circuits/edit-logical-circuit.php:87
 #: app/admin/circuits/edit-logical-circuit.php:306
 msgid "Move down"
 msgstr ""
@@ -7119,7 +7122,7 @@ msgstr ""
 msgid "Belonging Circuits"
 msgstr ""
 
-#: app/tools/devices/device-details/device-circuits.php:36
+#: app/tools/devices/device-details/device-circuits.php:38
 msgid "Circuits module disabled."
 msgstr ""
 
@@ -8235,7 +8238,8 @@ msgid "Expired"
 msgstr ""
 
 #: app/tools/vaults/vault/vault-items-certificates.php:75
-msgid "Normal"
+msgctxt "normal"
+msgid "OK"
 msgstr ""
 
 #: app/tools/vaults/vault/vault-items-certificates.php:86
@@ -11939,6 +11943,38 @@ msgid "Summary: "
 msgstr ""
 
 #: app/admin/import-export/import-devices-preview.php:38
+#: app/admin/import-export/import-devices-preview.php:39
+#: app/admin/import-export/import-devices-preview.php:40
+#: app/admin/import-export/import-devices-preview.php:41
+#: app/admin/import-export/import-vlan-preview.php:37
+#: app/admin/import-export/import-vlan-preview.php:38
+#: app/admin/import-export/import-vlan-preview.php:39
+#: app/admin/import-export/import-vlan-preview.php:40
+#: app/admin/import-export/import-vrf-preview.php:37
+#: app/admin/import-export/import-vrf-preview.php:38
+#: app/admin/import-export/import-vrf-preview.php:39
+#: app/admin/import-export/import-vrf-preview.php:40
+#: app/admin/import-export/import-subnets-preview.php:37
+#: app/admin/import-export/import-subnets-preview.php:38
+#: app/admin/import-export/import-subnets-preview.php:39
+#: app/admin/import-export/import-subnets-preview.php:40
+#: app/admin/import-export/import-ipaddr-preview.php:38
+#: app/admin/import-export/import-ipaddr-preview.php:39
+#: app/admin/import-export/import-ipaddr-preview.php:40
+#: app/admin/import-export/import-ipaddr-preview.php:41
+#: app/admin/import-export/import-l2dom-preview.php:37
+#: app/admin/import-export/import-l2dom-preview.php:38
+#: app/admin/import-export/import-l2dom-preview.php:39
+#: app/admin/import-export/import-l2dom-preview.php:40
+#: app/admin/import-export/import-devtype-preview.php:37
+#: app/admin/import-export/import-devtype-preview.php:38
+#: app/admin/import-export/import-devtype-preview.php:39
+#: app/admin/import-export/import-devtype-preview.php:40
+msgctxt "none"
+msgid "no"
+msgstr ""
+
+#: app/admin/import-export/import-devices-preview.php:38
 #: app/admin/import-export/import-vlan-preview.php:37
 #: app/admin/import-export/import-vrf-preview.php:37
 #: app/admin/import-export/import-subnets-preview.php:37
@@ -13108,6 +13144,11 @@ msgstr ""
 msgid "Invalid location B"
 msgstr ""
 
+#: app/admin/circuits/edit-logical-circuit.php:88
+#: app/admin/circuits/edit-logical-circuit.php:307
+msgid "Move up"
+msgstr ""
+
 #: app/admin/circuits/edit-logical-circuit.php:178
 msgid "Logical circuit"
 msgstr ""
@@ -13124,10 +13165,6 @@ msgstr ""
 
 #: app/admin/circuits/edit-logical-circuit.php:262
 msgid "Logical circuit physical members"
-msgstr ""
-
-#: app/admin/circuits/edit-logical-circuit.php:307
-msgid "Move up"
 msgstr ""
 
 #: app/admin/circuits/edit-logical-circuit.php:326
@@ -13430,6 +13467,11 @@ msgstr ""
 
 #: app/admin/customers/edit.php:86
 msgid "City"
+msgstr ""
+
+#: app/admin/customers/edit.php:87
+msgctxt "region"
+msgid "State"
 msgstr ""
 
 #: app/admin/customers/edit.php:90
@@ -16870,10 +16912,6 @@ msgid ""
 "settings > Update Tags"
 msgstr ""
 
-#: app/admin/firewall-zones/index.php:24
-msgid "zones"
-msgstr ""
-
 #: app/admin/firewall-zones/index.php:52
 msgid "Please enable the firewall zone module under server management"
 msgstr ""
@@ -17159,18 +17197,6 @@ msgstr ""
 msgid "Invalid zone generator method. Do not manipulate the POST values!"
 msgstr ""
 
-#: app/admin/firewall-zones/settings-save.php:61
-msgid "decimal"
-msgstr ""
-
-#: app/admin/firewall-zones/settings-save.php:61
-msgid "hex"
-msgstr ""
-
-#: app/admin/firewall-zones/settings-save.php:61
-msgid "text"
-msgstr ""
-
 #: app/admin/firewall-zones/settings-save.php:62
 msgid "Invalid zone generator types. Do not manipulate the POST values!"
 msgstr ""
@@ -17198,10 +17224,6 @@ msgstr ""
 
 #: app/admin/firewall-zones/settings-save.php:105
 msgid "Invalid device type."
-msgstr ""
-
-#: app/admin/firewall-zones/settings-save.php:109
-msgid "network"
 msgstr ""
 
 #: app/admin/firewall-zones/settings-save.php:110
