@@ -17908,6 +17908,12 @@ msgstr "权限"
 msgid "passkeys"
 msgstr "通行密钥"
 
+msgid "Success"
+msgstr "成功"
+
+msgid "Failed"
+msgstr "失败"
+
 # /app/admin/powerDNS/index.php:51
 #: app/admin/powerDNS/index.php:51
 msgid "domains"
