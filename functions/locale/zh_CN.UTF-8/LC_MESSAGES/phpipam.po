@@ -12,7 +12,6 @@
 # "Content-Type: text/plain; charset=UTF-8\n"
 # "Content-Transfer-Encoding: 8bit\n"
 
-
 #: index.php:94 js/bootstrap-table/bootstrap-table.min.js:7
 #: app/tools/changelog/index.php:55 app/tools/tools-menu-config.php:79
 #: app/dashboard/widgets/tools.php:23 app/sections/user-menu.php:43
@@ -43,6 +42,7 @@ msgstr "加载中"
 #: index.php:209 functions/classes/class.Tools.php:2023
 #: app/tools/locations/single-location.php:190
 #: app/tools/racks/print-single-rack.php:237
+#: app/admin/circuits/edit-logical-circuit.php:83
 #: app/admin/circuits/edit-logical-circuit.php:297
 msgid "Remove"
 msgstr "删除"
@@ -2373,6 +2373,7 @@ msgstr "根子网"
 #: functions/classes/class.Tools.php:3218
 #: app/tools/search/search-results-export.php:134
 #: app/tools/devices/index.php:58
+#: app/tools/devices/device-details/device-pstn.php:93
 #: app/tools/devices/device-details/device-details.php:216
 #: app/tools/devices/device-details/device-details.php:217
 #: app/admin/nat/item-add-search.php:85
@@ -3306,15 +3307,15 @@ msgstr "您的数据库服务器不支持 utf8mb4"
 msgid "Lastest version can be downloaded from "
 msgstr "最新版本可从以下网址下载 "
 
-#: functions/global_functions.php:127
+#: functions/global_functions.php:146
 msgid "Required PHP extension not installed: "
 msgstr "未安装所需的 PHP 扩展： "
 
-#: functions/global_functions.php:139
+#: functions/global_functions.php:158
 msgid "Required function disabled"
 msgstr "所需功能已禁用"
 
-#: functions/global_functions.php:141
+#: functions/global_functions.php:160
 msgid "Required function not found: "
 msgstr "未找到所需功能： "
 
@@ -3433,7 +3434,7 @@ msgstr "更改日志已成功清除"
 #: app/tools/search/search_results/search-results_circuits.php:37
 #: app/tools/search/search-results-export.php:493
 #: app/tools/customers/customer/objects/circuits.php:42
-#: app/tools/devices/device-details/device-circuits.php:55
+#: app/tools/devices/device-details/device-circuits.php:57
 #: app/tools/vaults/all-vaults.php:47
 #: app/tools/vaults/vault/vault-details-general.php:74
 #: app/tools/vaults/vault/vault-items-certificates.php:27
@@ -3684,14 +3685,11 @@ msgstr "DNS 名称"
 msgid "hostname"
 msgstr "主机名"
 
-#: app/tools/request-ip/index.php:70 
-#: app/tools/dhcp/leases.php:70
+#: app/tools/request-ip/index.php:70 app/tools/dhcp/leases.php:70
 #: app/tools/pstn-prefixes/single-prefix-numbers.php:24
-#: app/login/request_ip_form.php:83 
-#: app/admin/customers/edit.php:87
-#: app/admin/requests/edit.php:149
+#: app/login/request_ip_form.php:83 app/admin/requests/edit.php:149
 msgid "State"
-msgstr "省份"
+msgstr "状态"
 
 #: app/tools/request-ip/index.php:88
 #: app/tools/search/search_results/search-results_addresses.php:43
@@ -3830,7 +3828,10 @@ msgstr "所有通信线路图"
 msgid "Circuit Type Legend"
 msgstr "线路类型历史记录"
 
-#: app/tools/circuits/all-circuits-map.php:79 app/tools/circuits/options.php:29
+#: app/tools/circuits/all-circuits-map.php:79
+#: app/tools/circuits/logical-circuits/logical-circuit-details-map.php:72
+#: app/tools/circuits/options.php:29
+#, php-format
 msgid "(%s Line)"
 msgstr "(%s 线)"
 
@@ -3859,7 +3860,7 @@ msgstr "该链接参与以下逻辑链接"
 #: app/tools/circuits/logical-circuits/logical-circuits.php:50
 #: app/tools/search/search_results/search-results_circuits.php:33
 #: app/tools/customers/customer/objects/circuits.php:38
-#: app/tools/devices/device-details/device-circuits.php:51
+#: app/tools/devices/device-details/device-circuits.php:53
 #: app/admin/circuits/edit-circuit.php:89
 #: app/admin/circuits/edit-logical-circuit.php:191
 #: app/admin/circuits/edit-logical-circuit.php:267
@@ -3896,7 +3897,7 @@ msgstr "供应商详细信息"
 #: app/tools/search/search_results/search-results_circuits.php:34
 #: app/tools/search/search-results-export.php:490
 #: app/tools/customers/customer/objects/circuits.php:39
-#: app/tools/devices/device-details/device-circuits.php:52
+#: app/tools/devices/device-details/device-circuits.php:54
 #: app/admin/circuits/edit-circuit.php:103
 #: app/admin/circuits/edit-provider-submit.php:53
 msgid "Provider"
@@ -3924,7 +3925,7 @@ msgstr "添加通信线路"
 #: app/tools/customers/customer/objects/circuits.php:40
 #: app/tools/devices/all-devices.php:92
 #: app/tools/devices/device-details/device-details.php:54
-#: app/tools/devices/device-details/device-circuits.php:53
+#: app/tools/devices/device-details/device-circuits.php:55
 #: app/tools/vaults/vault/vault-details-general.php:38
 #: app/tools/firewall-zones/index.php:44
 #: app/tools/powerDNS/domain-records.php:132
@@ -3947,7 +3948,7 @@ msgstr "类型"
 #: app/tools/search/search_results/search-results_circuits.php:36
 #: app/tools/search/search-results-export.php:492
 #: app/tools/customers/customer/objects/circuits.php:41
-#: app/tools/devices/device-details/device-circuits.php:54
+#: app/tools/devices/device-details/device-circuits.php:56
 #: app/admin/circuits/edit-circuit.php:135
 #: app/admin/circuits/edit-circuit.php:137
 msgid "Capacity"
@@ -3958,7 +3959,7 @@ msgstr "容量"
 #: app/tools/circuits/providers/provider-details.php:138
 #: app/tools/circuits/logical-circuits/logical-circuit-details-members.php:131
 #: app/tools/customers/customer/objects/circuits.php:43
-#: app/tools/devices/device-details/device-circuits.php:57
+#: app/tools/devices/device-details/device-circuits.php:59
 #: app/admin/circuits/edit-circuit.php:193
 #: app/admin/circuits/edit-logical-circuit.php:269
 #: app/admin/circuits/edit-logical-circuit.php:333
@@ -3970,7 +3971,7 @@ msgstr "A 点"
 #: app/tools/circuits/providers/provider-details.php:139
 #: app/tools/circuits/logical-circuits/logical-circuit-details-members.php:132
 #: app/tools/customers/customer/objects/circuits.php:44
-#: app/tools/devices/device-details/device-circuits.php:58
+#: app/tools/devices/device-details/device-circuits.php:60
 #: app/admin/circuits/edit-circuit.php:224
 #: app/admin/circuits/edit-logical-circuit.php:270
 #: app/admin/circuits/edit-logical-circuit.php:334
@@ -4256,7 +4257,7 @@ msgid "Provider circuits"
 msgstr "供应商通信线路"
 
 #: app/tools/circuits/providers/provider-details.php:124
-#: app/tools/devices/device-details/device-circuits.php:42
+#: app/tools/devices/device-details/device-circuits.php:44
 msgid "No circuits"
 msgstr "无通信线路"
 
@@ -4423,6 +4424,7 @@ msgid "No custom fields created yet"
 msgstr "尚未创建自定义字段"
 
 #: app/tools/circuits/options.php:128 app/admin/custom-fields/index.php:113
+#: app/admin/circuits/edit-logical-circuit.php:87
 #: app/admin/circuits/edit-logical-circuit.php:306
 msgid "Move down"
 msgstr "下移"
@@ -6143,18 +6145,22 @@ msgid "Clear filter"
 msgstr "清除过滤器"
 
 #: app/tools/devices/all-devices-filter.php:149
+#, php-format
 msgid "Filter applied: Device Type = %s"
 msgstr "应用过滤器：设备类型 = %s"
 
 #: app/tools/devices/all-devices-filter.php:152
+#, php-format
 msgid "Filter applied: Rack = %s"
 msgstr "应用过滤器：机柜 = %s"
 
 #: app/tools/devices/all-devices-filter.php:155
+#, php-format
 msgid "Filter applied: Location = %s"
 msgstr "应用过滤器：位置 = %s"
 
 #: app/tools/devices/all-devices-filter.php:158
+#, php-format
 msgid "Filter applied: Section = %s"
 msgstr "应用过滤器：区域 = %s"
 
@@ -6308,7 +6314,7 @@ msgstr "上下文引擎ID"
 msgid "Belonging Circuits"
 msgstr "所属链接"
 
-#: app/tools/devices/device-details/device-circuits.php:36
+#: app/tools/devices/device-details/device-circuits.php:38
 msgid "Circuits module disabled."
 msgstr "链路模块已禁用."
 
@@ -6325,8 +6331,7 @@ msgid "No duplicate subnets found"
 msgstr "未找到重复的子网"
 
 #: app/tools/duplicates/index.php:43
-#, fuzzy, php-format
-#| msgid "%Free"
+#, php-format
 msgid "%Free"
 msgstr "%空闲"
 
@@ -7375,7 +7380,8 @@ msgid "Expired"
 msgstr "已过期"
 
 #: app/tools/vaults/vault/vault-items-certificates.php:75
-msgid "Normal"
+msgctxt "normal"
+msgid "OK"
 msgstr "正常"
 
 #: app/tools/vaults/vault/vault-items-certificates.php:86
@@ -8146,7 +8152,7 @@ msgstr "未使用"
 
 #: app/tools/pstn-prefixes/single-prefix-numbers.php:21
 msgid "Short"
-msgstr "短"
+msgstr "短号"
 
 #: app/tools/pstn-prefixes/single-prefix-numbers.php:50
 msgid "No numbers"
@@ -8228,6 +8234,7 @@ msgid "PowerDNS management"
 msgstr "PowerDNS 管理"
 
 #: app/tools/powerDNS/index.php:34 app/admin/powerDNS/index.php:37
+#, php-format
 msgid "Please set <a href='%s'> default powerDNS values </a>!"
 msgstr "请设置 <a href='%s'> 默认的 powerDNS 值 </a>！"
 
@@ -8417,6 +8424,7 @@ msgid " policy"
 msgstr " 策略"
 
 #: app/tools/nat/all_nats.php:117
+#, php-format
 msgid "No %s NAT configured"
 msgstr "没有 %s NAT 配置"
 
@@ -8785,6 +8793,7 @@ msgid "records"
 msgstr "条目"
 
 #: app/subnets/subnet-details/subnet-details.php:474
+#, php-format
 msgid "Zone %s missing"
 msgstr "缺少区域 %s"
 
@@ -9244,6 +9253,7 @@ msgid "Temporary share address"
 msgstr "临时共享地址"
 
 #: app/subnets/addresses/print-address-table.php:145
+#, php-format
 msgid "IP addresses in %s"
 msgstr "在 %s 中的 IP 地址"
 
@@ -10912,6 +10922,38 @@ msgid "Summary: "
 msgstr "概括： "
 
 #: app/admin/import-export/import-devices-preview.php:38
+#: app/admin/import-export/import-devices-preview.php:39
+#: app/admin/import-export/import-devices-preview.php:40
+#: app/admin/import-export/import-devices-preview.php:41
+#: app/admin/import-export/import-vlan-preview.php:37
+#: app/admin/import-export/import-vlan-preview.php:38
+#: app/admin/import-export/import-vlan-preview.php:39
+#: app/admin/import-export/import-vlan-preview.php:40
+#: app/admin/import-export/import-vrf-preview.php:37
+#: app/admin/import-export/import-vrf-preview.php:38
+#: app/admin/import-export/import-vrf-preview.php:39
+#: app/admin/import-export/import-vrf-preview.php:40
+#: app/admin/import-export/import-subnets-preview.php:37
+#: app/admin/import-export/import-subnets-preview.php:38
+#: app/admin/import-export/import-subnets-preview.php:39
+#: app/admin/import-export/import-subnets-preview.php:40
+#: app/admin/import-export/import-ipaddr-preview.php:38
+#: app/admin/import-export/import-ipaddr-preview.php:39
+#: app/admin/import-export/import-ipaddr-preview.php:40
+#: app/admin/import-export/import-ipaddr-preview.php:41
+#: app/admin/import-export/import-l2dom-preview.php:37
+#: app/admin/import-export/import-l2dom-preview.php:38
+#: app/admin/import-export/import-l2dom-preview.php:39
+#: app/admin/import-export/import-l2dom-preview.php:40
+#: app/admin/import-export/import-devtype-preview.php:37
+#: app/admin/import-export/import-devtype-preview.php:38
+#: app/admin/import-export/import-devtype-preview.php:39
+#: app/admin/import-export/import-devtype-preview.php:40
+msgctxt "none"
+msgid "no"
+msgstr "无"
+
+#: app/admin/import-export/import-devices-preview.php:38
 #: app/admin/import-export/import-vlan-preview.php:37
 #: app/admin/import-export/import-vrf-preview.php:37
 #: app/admin/import-export/import-subnets-preview.php:37
@@ -10984,6 +11026,7 @@ msgstr "向下滚动查看详细信息."
 #: app/admin/import-export/import-devtype-check.php:41
 #: app/admin/import-export/import-vrf-check.php:42
 #: app/admin/import-export/import-l2dom-check.php:41
+#, php-format
 msgid "Required field %s missing or empty."
 msgstr "必填字段 %s 缺失或者为空。"
 
@@ -11108,6 +11151,7 @@ msgid "Location will be updated."
 msgstr "位置将会更新。"
 
 #: app/admin/import-export/import-ipaddr-check.php:267
+#, php-format
 msgid " %s will be updated."
 msgstr "%s 将被更新。"
 
@@ -11221,10 +11265,12 @@ msgid "L2 Domain import"
 msgstr "L2 域导入"
 
 #: app/admin/import-export/import-l2dom.php:48
+#, php-format
 msgid "L2 Domain %s successful."
 msgstr "L2 域 %s 成功。"
 
 #: app/admin/import-export/import-l2dom.php:51
+#, php-format
 msgid "L2 Domain %s failed."
 msgstr "L2 域 %s 失败。"
 
@@ -11260,6 +11306,7 @@ msgid "VLAN description will be updated."
 msgstr "VLAN 描述将会更新。"
 
 #: app/admin/import-export/import-vlan-check.php:95
+#, php-format
 msgid "VLAN %s will be updated."
 msgstr "VLAN %s 将被更新。"
 
@@ -11323,10 +11370,12 @@ msgid "IP Addresses import"
 msgstr "IP 地址导入"
 
 #: app/admin/import-export/import-ipaddr.php:67
+#, php-format
 msgid "IP Address %s successful."
 msgstr "IP 地址 %s 成功。"
 
 #: app/admin/import-export/import-ipaddr.php:70
+#, php-format
 msgid "IP Address %s failed."
 msgstr "IP 地址 %s 失败。"
 
@@ -11415,10 +11464,12 @@ msgid "VRF import"
 msgstr "VRF 导入"
 
 #: app/admin/import-export/import-vrf.php:55
+#, php-format
 msgid "VRF %s successful."
 msgstr "VRF %s 成功。"
 
 #: app/admin/import-export/import-vrf.php:58
+#, php-format
 msgid "VRF %s failed."
 msgstr "VRF %s 失败。"
 
@@ -11536,10 +11587,12 @@ msgid "Cannot move file to upload dir"
 msgstr "无法将文件移动到上传目录"
 
 #: app/admin/import-export/import-verify.php:52
+#, php-format
 msgid "Error: %s"
 msgstr "错误：%s"
 
 #: app/admin/import-export/import-verify.php:100
+#, php-format
 msgid "Empty or too big file (limit %s"
 msgstr "文件为空或者太大（限制 %s"
 
@@ -11665,10 +11718,12 @@ msgid "Devices Addresses import"
 msgstr "设备地址导入"
 
 #: app/admin/import-export/import-devices.php:80
+#, php-format
 msgid "Devices %s successful."
 msgstr "设备 %s 成功。"
 
 #: app/admin/import-export/import-devices.php:83
+#, php-format
 msgid "Devices %s failed."
 msgstr "设备 %s 失败。"
 
@@ -11708,10 +11763,12 @@ msgid "DeviceType import"
 msgstr "设备类型导入"
 
 #: app/admin/import-export/import-devtype.php:48
+#, php-format
 msgid "DeviceTypes %s successful."
 msgstr "设备类型 %s 成功。"
 
 #: app/admin/import-export/import-devtype.php:51
+#, php-format
 msgid "DeviceTypes %s failed."
 msgstr "设备类型 %s 失败。"
 
@@ -11724,10 +11781,12 @@ msgid "Subnets import"
 msgstr "子网导入"
 
 #: app/admin/import-export/import-subnets.php:63
+#, php-format
 msgid "Subnets %s successful."
 msgstr "子网 %s 成功。"
 
 #: app/admin/import-export/import-subnets.php:66
+#, php-format
 msgid "Subnets %s failed."
 msgstr "子网 %s 失败。"
 
@@ -11742,10 +11801,12 @@ msgid "VLAN import"
 msgstr "VLAN 导入"
 
 #: app/admin/import-export/import-vlan.php:56
+#, php-format
 msgid "VLAN %s successful."
 msgstr "VLAN %s 成功。"
 
 #: app/admin/import-export/import-vlan.php:59
+#, php-format
 msgid "VLAN %s failed."
 msgstr "VLAN %s 失败。"
 
@@ -12064,6 +12125,11 @@ msgstr "无效设备 B"
 msgid "Invalid location B"
 msgstr "无效位置 B"
 
+#: app/admin/circuits/edit-logical-circuit.php:88
+#: app/admin/circuits/edit-logical-circuit.php:307
+msgid "Move up"
+msgstr "向上移动"
+
 #: app/admin/circuits/edit-logical-circuit.php:178
 msgid "Logical circuit"
 msgstr "逻辑通信线路"
@@ -12081,10 +12147,6 @@ msgstr "已发现重复通信线路。 请删除！ 重新排序将会受到影�
 #: app/admin/circuits/edit-logical-circuit.php:262
 msgid "Logical circuit physical members"
 msgstr "逻辑通信线路物理成员"
-
-#: app/admin/circuits/edit-logical-circuit.php:307
-msgid "Move up"
-msgstr "向上移动"
 
 #: app/admin/circuits/edit-logical-circuit.php:326
 msgid "Available physical circuits"
@@ -12374,6 +12436,11 @@ msgstr "邮政编码"
 #: app/admin/customers/edit.php:86
 msgid "City"
 msgstr "城市"
+
+#: app/admin/customers/edit.php:87
+msgctxt "region"
+msgid "State"
+msgstr "省份"
 
 #: app/admin/customers/edit.php:90
 msgid "Customer address"
@@ -12972,6 +13039,7 @@ msgid "Failed to VLAN !"
 msgstr "%s VLAN 失败！"
 
 #: app/admin/vlans/edit-result.php:97
+#, php-format
 msgid "VLAN %s successful !"
 msgstr "VLAN %s 成功！"
 
@@ -13002,6 +13070,7 @@ msgid "Default domain cannot be deleted"
 msgstr "默认域名无法删除"
 
 #: app/admin/vlans/edit-domain-result.php:67
+#, php-format
 msgid "Domain %s successful !"
 msgstr "域 %s 成功！"
 
@@ -15316,10 +15385,12 @@ msgid "Invalid agent name"
 msgstr "代理名称无效"
 
 #: app/admin/scan-agents/edit-result.php:72
+#, php-format
 msgid "Agent %s error"
 msgstr "代理 %s 错误"
 
 #: app/admin/scan-agents/edit-result.php:73
+#, php-format
 msgid "Agent %s success"
 msgstr "代理 %s 成功"
 
@@ -15713,10 +15784,6 @@ msgid ""
 "Update address tag to online/offline if state change occurs. Combine with "
 "settings > Update Tags"
 msgstr "如果状态发生变化，则将地址标签更新为在线/离线。 与设置结合 > 更新标签"
-
-#: app/admin/firewall-zones/index.php:24
-msgid "zones"
-msgstr "区域"
 
 #: app/admin/firewall-zones/index.php:52
 msgid "Please enable the firewall zone module under server management"
@@ -17448,10 +17515,12 @@ msgid "Code must be at least 2 characters long"
 msgstr "代码长度必须至少为 2 个字符"
 
 #: app/admin/languages/edit-result.php:38
+#, php-format
 msgid "Language %s error"
 msgstr "语言 %s 错误"
 
 #: app/admin/languages/edit-result.php:39
+#, php-format
 msgid "Language %s success"
 msgstr "语言 %s 成功"
 
@@ -17524,7 +17593,7 @@ msgstr "显示主机、子网数量的一些统计信息"
 
 #: db/SCHEMA.sql:578
 msgid "Shows favourite subnets"
-msgstr "显示\a收藏的子网"
+msgstr "显示收藏的子网"
 
 #: db/SCHEMA.sql:579
 msgid "Top IPv4 subnets by number of hosts"
@@ -17847,27 +17916,31 @@ msgstr "域名"
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
+#: app/admin/powerDNS/index.php:51
 msgid "host_records"
 msgstr "主机记录"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
+#: app/admin/powerDNS/index.php:51
 msgid "reverse_v4"
 msgstr "反向 V4"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
+#: app/admin/powerDNS/index.php:51
 msgid "reverse_v6"
 msgstr "反向 V6"
 
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
+#: app/admin/powerDNS/index.php:51
 msgid "defaults"
 msgstr "默认"
 
-#app/admin/firewall-zones/index.php:24
+# app/admin/firewall-zones/index.php:24
 msgid "Zones"
 msgstr "区域"
 
