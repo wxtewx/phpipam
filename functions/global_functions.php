@@ -2,13 +2,13 @@
 
 // Fallback for missing gettext functions
 if(!function_exists('gettext')) {
-    function gettext($text) { return $text; }
-    function _($text) { return $text; }
+    function gettext(?string $text): string { return $text ?? '';  }
+    function _(?string $text): string { return $text ?? '';  }
 }
 
 // Context-aware translation function
 if (!function_exists('pgettext')) {
-    function pgettext(string $context, string $message): string {
+    function pgettext(string $context, ?string $message): string {$message = $message ?? ''; 
         $key = "{$context}\x04{$message}";
         // Prioritize context translation
         if (($contextTranslation = dcgettext(textdomain(null), $key, LC_MESSAGES)) !== $key && $contextTranslation) {
