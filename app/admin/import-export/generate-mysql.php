@@ -20,10 +20,15 @@ $User->check_user_session();
 
 $mysqldump = Config::ValueOf('mysqldump_cli_binary', '/usr/bin/mysqldump');
 
-if ( !file_exists($mysqldump) ) {
+# validate csrf cookie
+if ($User->Crypto->csrf_cookie("validate", "generate-export", $GET->csrf) === false) {
     $filename = "error_message.txt";
 
-    $content  = _("Unable to locate executable: ").$mysqldump."\n";
+    $content  = _("Invalid CSRF cookie");
+} elseif (!file_exists($mysqldump)) {
+    $filename = "error_message.txt";
+
+    $content  = _("Unable to locate executable: ") . $mysqldump . "\n";
     $content .= _("Please configure \$mysqldump_cli_binary in config.php\n");
 } else {
     $filename = "phpipam_MySQL_dump_". date("Y-m-d") .".sql";
