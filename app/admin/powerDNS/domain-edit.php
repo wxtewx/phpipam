@@ -86,7 +86,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 				if ($type == @$domain->type)	{ $selected = "selected"; }
 				else							{ $selected = ""; }
 				// print
-				print "<option value='$type' $selected>$type</option>";
+				print "<option value='$type' $selected>"._($type)."</option>";
 			}
 			?>
 			</select>
@@ -133,7 +133,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->ttl)	{ $selected = "selected"; }
 			else					{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>
@@ -151,7 +151,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->refresh)	{ $selected = "selected"; }
 			else						{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>
@@ -169,7 +169,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->retry)	{ $selected = "selected"; }
 			else						{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>		</td>
@@ -188,7 +188,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 				if ($k == @$pdns->nxdomain_ttl)	{ $selected = "selected"; }
 				else							{ $selected = ""; }
 				// print
-				print "<option value='$k' $selected>$ttl ($k)</option>";
+				print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 			}
 		}
 		?>
@@ -208,7 +208,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
                     if ($k == @$pdns->expire)       { $selected = "selected"; }
                     else                                                    { $selected = ""; }
                     // print
-                    print "<option value='$k' $selected>$ttl ($k)</option>";
+                    print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
             }
             ?>
             </select>

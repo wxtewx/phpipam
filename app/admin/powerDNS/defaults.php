@@ -51,7 +51,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 <tr>
 	<td><?php print _('Default PTR domain'); ?></th>
 	<td>
-		<input type="text" class="form-control input-sm" name="def_ptr_domain" placeholder="Not used" value="<?php print @$pdns->def_ptr_domain; ?>">
+		<input type="text" class="form-control input-sm" name="def_ptr_domain" placeholder=<?php print _("Not used");?> value="<?php print @$pdns->def_ptr_domain; ?>">
 	</td>
 	<td>
 		<span class="text-muted"><?php print _("Default PTR domain if no valid hostname for PTR is provided"); ?></span>
@@ -70,7 +70,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->refresh)	{ $selected = "selected"; }
 			else						{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>
@@ -91,7 +91,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->retry)	{ $selected = "selected"; }
 			else						{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>
@@ -112,7 +112,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->expire)	{ $selected = "selected"; }
 			else						{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>
@@ -133,7 +133,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->nxdomain_ttl)	{ $selected = "selected"; }
 			else							{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>
@@ -154,7 +154,7 @@ $readonly = $POST->action=="delete" ? "readonly" : "";
 			if ($k == @$pdns->ttl)	{ $selected = "selected"; }
 			else					{ $selected = ""; }
 			// print
-			print "<option value='$k' $selected>$ttl ($k)</option>";
+			print "<option value='$k' $selected>"._($ttl)." ($k)</option>";
 		}
 		?>
 		</select>	</td>

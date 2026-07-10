@@ -53,8 +53,8 @@ else {
                 // null
                 if($location_id=="0") {
                     $location = new StdClass ();
-                    $location->name = "No location";
-                    $location->description = "Location not set for this racks.";
+                    $location->name = _("No location");
+                    $location->description = _("Location not set for this racks.");
                 }
                 else {
                     $location = $Tools->fetch_object ("locations", "id", $location_id);

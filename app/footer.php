@@ -1,7 +1,7 @@
 <table class="donate">
 <tr>
 	<td>
-		<a href="http://phpipam.net" target='_blank'>phpIPAM IP address management <?php print '[v'. VERSION_VISIBLE. ']'; ?></a>
+		<a href="http://phpipam.net" target='_blank'><?php print _("phpIPAM IP address management");?> <?php print '[v'. VERSION_VISIBLE. ']'; ?></a>
 		<?php
 		// Display SCHEMA database version in development builds
 		if(PUBLISHED===false) {

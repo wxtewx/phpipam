@@ -136,8 +136,8 @@ $('#switchManagementEdit select[name=rack]').change(function() {
 			// if the type of this device isn't found in the list of device types, then prepend it
 			if (!in_array($device['type'],array_column($types,'tid'))) array_unshift($types,(object) array("tid"=>$device['type'],"tname"=>"Undefined"));
 			foreach($types as $name) {
-				if($device['type'] == $name->tid)	{ print "<option value='$name->tid' selected='selected'>$name->tname</option>"; }
-				else								{ print "<option value='$name->tid' >$name->tname</option>"; }
+				if($device['type'] == $name->tid)	{ print "<option value='$name->tid' selected='selected'>"._($name->tname)."</option>"; }
+				else								{ print "<option value='$name->tid' >"._($name->tname)."</option>"; }
 			}
 			?>
 			</select>
