@@ -5,15 +5,15 @@
  *********************************/
 
 /* functions */
-require_once(dirname(__FILE__) . '/../../../functions/functions.php');
+require_once( dirname(__FILE__) . '/../../../functions/functions.php' );
 
 # Don't corrupt output with php errors!
 disable_php_errors();
 
 # initialize user object
-$Database     = new Database_PDO;
-$User         = new User($Database);
-$Admin        = new Admin($Database);
+$Database 	= new Database_PDO;
+$User 		= new User ($Database);
+$Admin		= new Admin ($Database);
 
 # verify that user is logged in
 $User->check_user_session();
@@ -22,7 +22,12 @@ $User->is_admin();
 
 $mysqldump = Config::ValueOf('mysqldump_cli_binary', '/usr/bin/mysqldump');
 
-if (!file_exists($mysqldump)) {
+# validate csrf cookie
+if ($User->Crypto->csrf_cookie("validate", "generate-export", $GET->csrf) === false) {
+    $filename = "error_message.txt";
+
+    $content  = _("Invalid CSRF cookie");
+} elseif (!file_exists($mysqldump)) {
     $filename = "error_message.txt";
 
     $content  = _("Unable to locate executable: ") . $mysqldump . "\n";
@@ -63,7 +68,7 @@ if (!file_exists($mysqldump)) {
 header("Cache-Control: private");
 header("Content-Description: File Transfer");
 header("Content-Type: application/octet-stream");
-header('Content-Disposition: attachment; filename="' . $filename . '"');
+header('Content-Disposition: attachment; filename="'. $filename .'"');
 header("Content-Length: " . strlen($content));
 
 print($content);
