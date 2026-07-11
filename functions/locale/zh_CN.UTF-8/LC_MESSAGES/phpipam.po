@@ -3835,8 +3835,8 @@ msgid "-- autodiscovered --"
 msgstr "-- 自动发现 --"
 
 #: /root/phpipam/functions/scripts/discoveryCheck.php:259
-msgid "This host was autodiscovered on"
-msgstr "此主机自动发现于"
+msgid "This host was autodiscovered on %s"
+msgstr "此主机自动发现于 %s"
 
 #: /root/phpipam/functions/scripts/discoveryCheck.php:302
 msgid "phpIPAM new addresses detected"

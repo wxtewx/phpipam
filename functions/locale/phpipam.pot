@@ -3823,7 +3823,7 @@ msgid "-- autodiscovered --"
 msgstr ""
 
 #: /root/phpipam/functions/scripts/discoveryCheck.php:259
-msgid "This host was autodiscovered on"
+msgid "This host was autodiscovered on %s"
 msgstr ""
 
 #: /root/phpipam/functions/scripts/discoveryCheck.php:302
