@@ -109,7 +109,7 @@ else {
 }
 
 //print scan method
-print "<div class='text-right' style='margin-top:7px;'><span class='muted'>Scan method: telnet</span></dov>";
+print "<div class='text-right' style='margin-top:7px;'><span class='muted'>"._("Scan method").": telnet</span></dov>";
 
 # show debug?
 if($POST->debug==1) 				{ print "<pre>"; print_r($output[0]); print "</pre>"; }

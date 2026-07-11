@@ -256,7 +256,7 @@ foreach ($scan_subnets as $s) {
                 "ip_addr"     => $ip,
                 "hostname"    => $hostname['name'],
                 "description" => _("-- autodiscovered --"),
-                "note"        => tr_("This host was autodiscovered on %s", $nowdate),
+                "note"        => _("This host was autodiscovered on") . " " . $nowdate,
                 "lastSeen"    => $nowdate,
                 "state"       => "2",
                 "action"      => "add"
