@@ -11,7 +11,6 @@
 # "MIME-Version: 1.0\n"
 # "Content-Type: text/plain; charset=UTF-8\n"
 # "Content-Transfer-Encoding: 8bit\n"
-
 #: /root/phpipam/index.php:94
 #: /root/phpipam/js/bootstrap-table/bootstrap-table.min.js:7
 #: /root/phpipam/app/tools/changelog/index.php:55
@@ -3138,7 +3137,7 @@ msgstr "您没有访问此模块的权限"
 #: /root/phpipam/functions/classes/class.Rackspace.php:457
 #: /root/phpipam/functions/classes/class.Rackspace.php:499
 msgid "R"
-msgstr "R"
+msgstr ""
 
 #: /root/phpipam/functions/classes/class.Rackspace.php:321
 #: /root/phpipam/functions/classes/class.Rackspace.php:341
@@ -5987,6 +5986,7 @@ msgstr "大小"
 
 #: /root/phpipam/app/tools/customers/customer/objects/racks.php:33
 #: /root/phpipam/app/tools/racks/print-racks-list.php:34
+#: /root/phpipam/app/tools/racks/print-single-rack.php:219
 #: /root/phpipam/app/admin/racks/edit.php:121
 msgid "Back side"
 msgstr "背面"
@@ -7635,6 +7635,16 @@ msgstr "内置"
 #: /root/phpipam/app/tools/racks/print-single-rack.php:196
 msgid "Rack is empty"
 msgstr "架子是空的"
+
+#: /root/phpipam/app/tools/racks/print-single-rack.php:218
+msgid "Front side"
+msgstr "正面"
+
+#: /root/phpipam/app/tools/racks/print-single-rack.php:229
+#: /root/phpipam/app/admin/widgets/index.php:62
+#: /root/phpipam/app/admin/languages/index.php:58
+msgid "Invalid"
+msgstr "无效"
 
 #: /root/phpipam/app/tools/racks/print-single-rack.php:338
 msgid "Add custom equipment"
@@ -13623,11 +13633,6 @@ msgstr "有效性"
 #: /root/phpipam/app/admin/languages/index.php:57
 msgid "Valid"
 msgstr "有效"
-
-#: /root/phpipam/app/admin/widgets/index.php:62
-#: /root/phpipam/app/admin/languages/index.php:58
-msgid "Invalid"
-msgstr "无效"
 
 #: /root/phpipam/app/admin/widgets/index.php:87
 msgid "Create widget file in directory app/dashboard/widgets/"

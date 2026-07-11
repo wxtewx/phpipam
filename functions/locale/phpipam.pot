@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-11 10:46+0800\n"
+"POT-Creation-Date: 2026-07-11 15:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5953,6 +5953,7 @@ msgstr ""
 
 #: /root/phpipam/app/tools/customers/customer/objects/racks.php:33
 #: /root/phpipam/app/tools/racks/print-racks-list.php:34
+#: /root/phpipam/app/tools/racks/print-single-rack.php:219
 #: /root/phpipam/app/admin/racks/edit.php:121
 msgid "Back side"
 msgstr ""
@@ -7596,6 +7597,16 @@ msgstr ""
 
 #: /root/phpipam/app/tools/racks/print-single-rack.php:196
 msgid "Rack is empty"
+msgstr ""
+
+#: /root/phpipam/app/tools/racks/print-single-rack.php:218
+msgid "Front side"
+msgstr ""
+
+#: /root/phpipam/app/tools/racks/print-single-rack.php:229
+#: /root/phpipam/app/admin/widgets/index.php:62
+#: /root/phpipam/app/admin/languages/index.php:58
+msgid "Invalid"
 msgstr ""
 
 #: /root/phpipam/app/tools/racks/print-single-rack.php:338
@@ -13556,11 +13567,6 @@ msgstr ""
 msgid "Valid"
 msgstr ""
 
-#: /root/phpipam/app/admin/widgets/index.php:62
-#: /root/phpipam/app/admin/languages/index.php:58
-msgid "Invalid"
-msgstr ""
-
 #: /root/phpipam/app/admin/widgets/index.php:87
 msgid "Create widget file in directory app/dashboard/widgets/"
 msgstr ""
@@ -18812,383 +18818,410 @@ msgstr ""
 # ###############  Self-addition required ########################################
 #: db/SCHEMA.sql:577
 msgid "Statistics"
-msgstr "Í³¼Æ"
+msgstr "ç»Ÿè®¡"
 
 #: db/SCHEMA.sql:577
 msgid "Shows some statistics on number of hosts, subnets"
-msgstr "ÏÔÊ¾Ö÷»ú¡¢×ÓÍøÊıÁ¿µÄÒ»Ğ©Í³¼ÆĞÅÏ¢"
+msgstr "æ˜¾ç¤ºä¸»æœºã€å­ç½‘æ•°é‡çš„ä¸€äº›ç»Ÿè®¡ä¿¡æ¯"
 
 #: db/SCHEMA.sql:578
 msgid "Shows favourite subnets"
-msgstr "ÏÔÊ¾ÊÕ²ØµÄ×ÓÍø"
+msgstr "æ˜¾ç¤ºæ”¶è—çš„å­ç½‘"
 
 #: db/SCHEMA.sql:579
 msgid "Top IPv4 subnets by number of hosts"
-msgstr "°´Ö÷»úÊıÁ¿ÅÅÃû¿¿Ç°µÄ IPv4 ×ÓÍø"
+msgstr "æŒ‰ä¸»æœºæ•°é‡æ’åé å‰çš„ IPv4 å­ç½‘"
 
 #: db/SCHEMA.sql:579
 msgid "Shows graph of top IPv4 subnets by number of hosts"
-msgstr "ÏÔÊ¾°´Ö÷»úÊıÁ¿ÅÅÁĞ¿¿Ç°µÄ IPv4 ×ÓÍøÍ¼±í"
+msgstr "æ˜¾ç¤ºæŒ‰ä¸»æœºæ•°é‡æ’åˆ—é å‰çš„ IPv4 å­ç½‘å›¾è¡¨"
 
 #: db/SCHEMA.sql:580
 msgid "Top IPv6 subnets by number of hosts"
-msgstr "°´Ö÷»úÊıÁ¿ÅÅÃû¿¿Ç°µÄ IPv6 ×ÓÍø"
+msgstr "æŒ‰ä¸»æœºæ•°é‡æ’åé å‰çš„ IPv6 å­ç½‘"
 
 #: db/SCHEMA.sql:580
 msgid "Shows graph of top IPv6 subnets by number of hosts"
-msgstr "ÏÔÊ¾°´Ö÷»úÊıÁ¿ÅÅÁĞ¿¿Ç°µÄ IPv6 ×ÓÍøÍ¼±í"
+msgstr "æ˜¾ç¤ºæŒ‰ä¸»æœºæ•°é‡æ’åˆ—é å‰çš„ IPv6 å­ç½‘å›¾è¡¨"
 
 #: db/SCHEMA.sql:581
 msgid "Top IPv4 subnets by usage percentage"
-msgstr "°´Ê¹ÓÃÂÊ°Ù·Ö±ÈÅÅÃû¿¿Ç°µÄ IPv4 ×ÓÍø"
+msgstr "æŒ‰ä½¿ç”¨ç‡ç™¾åˆ†æ¯”æ’åé å‰çš„ IPv4 å­ç½‘"
 
 #: db/SCHEMA.sql:581
 msgid "Shows graph of top IPv4 subnets by usage percentage"
-msgstr "°´Ê¹ÓÃÂÊ°Ù·Ö±ÈÏÔÊ¾ÅÅÃû¿¿Ç°µÄ IPv4 ×ÓÍøÍ¼±í"
+msgstr "æŒ‰ä½¿ç”¨ç‡ç™¾åˆ†æ¯”æ˜¾ç¤ºæ’åé å‰çš„ IPv4 å­ç½‘å›¾è¡¨"
 
 #: db/SCHEMA.sql:582
 msgid "Most recent change log entries"
-msgstr "×î½üµÄ¸ü¸ÄÈÕÖ¾ÌõÄ¿"
+msgstr "æœ€è¿‘çš„æ›´æ”¹æ—¥å¿—æ¡ç›®"
 
 #: db/SCHEMA.sql:582
 msgid "Shows list of most recent change log entries"
-msgstr "ÏÔÊ¾×îĞÂ¸ü¸ÄÈÕÖ¾ÌõÄ¿ÁĞ±í"
+msgstr "æ˜¾ç¤ºæœ€æ–°æ›´æ”¹æ—¥å¿—æ¡ç›®åˆ—è¡¨"
 
 #: db/SCHEMA.sql:583
 msgid "Active IP addresses requests"
-msgstr "»îÔ¾ IP µØÖ·ÉêÇë"
+msgstr "æ´»è·ƒ IP åœ°å€ç”³è¯·"
 
 #: db/SCHEMA.sql:583
 msgid "Shows list of active IP address request"
-msgstr "ÏÔÊ¾»îÔ¾ IP µØÖ·ÇëÇóÁĞ±í"
+msgstr "æ˜¾ç¤ºæ´»è·ƒ IP åœ°å€è¯·æ±‚åˆ—è¡¨"
 
 #: db/SCHEMA.sql:584
 msgid "Most recent informational logs"
-msgstr "×î½üµÄĞÅÏ¢ÈÕÖ¾"
+msgstr "æœ€è¿‘çš„ä¿¡æ¯æ—¥å¿—"
 
 #: db/SCHEMA.sql:584
 msgid "Shows list of most recent informational logs"
-msgstr "ÏÔÊ¾×îĞÂĞÅÏ¢ÈÕÖ¾ÁĞ±í"
+msgstr "æ˜¾ç¤ºæœ€æ–°ä¿¡æ¯æ—¥å¿—åˆ—è¡¨"
 
 #: db/SCHEMA.sql:585
 msgid "Most recent warning / error logs"
-msgstr "×î½üµÄ¾¯¸æ/´íÎóÈÕÖ¾"
+msgstr "æœ€è¿‘çš„è­¦å‘Š/é”™è¯¯æ—¥å¿—"
 
 #: db/SCHEMA.sql:585
 msgid "Shows list of most recent warning and error logs"
-msgstr "ÏÔÊ¾×î½üµÄ¾¯¸æºÍ´íÎóÈÕÖ¾ÁĞ±í"
+msgstr "æ˜¾ç¤ºæœ€è¿‘çš„è­¦å‘Šå’Œé”™è¯¯æ—¥å¿—åˆ—è¡¨"
 
 #: db/SCHEMA.sql:586
 msgid "Tools menu"
-msgstr "¹¤¾ß²Ëµ¥"
+msgstr "å·¥å…·èœå•"
 
 #: db/SCHEMA.sql:586
 msgid "Shows quick access to tools menu"
-msgstr "ÏÔÊ¾¿ìËÙ·ÃÎÊ¹¤¾ß²Ëµ¥"
+msgstr "æ˜¾ç¤ºå¿«é€Ÿè®¿é—®å·¥å…·èœå•"
 
 #: db/SCHEMA.sql:587
 msgid "IP Calculator"
-msgstr "IP ¼ÆËãÆ÷"
+msgstr "IP è®¡ç®—å™¨"
 
 #: db/SCHEMA.sql:587
 msgid "Shows IP calculator as widget"
-msgstr "ÏÔÊ¾ IP ¼ÆËãÆ÷×÷ÎªĞ¡²¿¼ş"
+msgstr "æ˜¾ç¤º IP è®¡ç®—å™¨ä½œä¸ºå°éƒ¨ä»¶"
 
 #: db/SCHEMA.sql:588
 msgid "IP Request"
-msgstr "IP ÇëÇó"
+msgstr "IP è¯·æ±‚"
 
 #: db/SCHEMA.sql:588
 msgid "IP Request widget"
-msgstr "IP ÇëÇóĞ¡²¿¼ş"
+msgstr "IP è¯·æ±‚å°éƒ¨ä»¶"
 
 #: db/SCHEMA.sql:589
 msgid "Shows threshold usage for most consumed subnets"
-msgstr "ÏÔÊ¾´ó¶àÊıÏûºÄµÄ×ÓÍøµÄãĞÖµÊ¹ÓÃÇé¿ö"
+msgstr "æ˜¾ç¤ºå¤§å¤šæ•°æ¶ˆè€—çš„å­ç½‘çš„é˜ˆå€¼ä½¿ç”¨æƒ…å†µ"
 
 #: db/SCHEMA.sql:590
 msgid "Shows list of inactive hosts for defined period"
-msgstr "ÏÔÊ¾Ö¸¶¨Ê±¼ä¶ÎÄÚ²»»î¶¯µÄÖ÷»úÁĞ±í"
+msgstr "æ˜¾ç¤ºæŒ‡å®šæ—¶é—´æ®µå†…ä¸æ´»åŠ¨çš„ä¸»æœºåˆ—è¡¨"
 
 #: db/SCHEMA.sql:591
 msgid "Shows map of locations"
-msgstr "ÏÔÊ¾Î»ÖÃµØÍ¼"
+msgstr "æ˜¾ç¤ºä½ç½®åœ°å›¾"
 
 #: db/SCHEMA.sql:592
 msgid "Calculate bandwidth"
-msgstr "¼ÆËã´ø¿í"
+msgstr "è®¡ç®—å¸¦å®½"
 
 #: db/SCHEMA.sql:593
 msgid "Shows customer list"
-msgstr "ÏÔÊ¾¿Í»§ÁĞ±í"
+msgstr "æ˜¾ç¤ºå®¢æˆ·åˆ—è¡¨"
 
 #: db/SCHEMA.sql:594
 msgid "User Instructions"
-msgstr "ÓÃ»§ËµÃ÷"
+msgstr "ç”¨æˆ·è¯´æ˜"
 
 #: db/SCHEMA.sql:594
 msgid "Shows user instructions"
-msgstr "ÏÔÊ¾ÓÃ»§ËµÃ÷"
+msgstr "æ˜¾ç¤ºç”¨æˆ·è¯´æ˜"
 
 #: db/SCHEMA.sql:595
 msgid "Shows MAC address vendor"
-msgstr "ÏÔÊ¾ MAC µØÖ·¹©Ó¦ÉÌ"
+msgstr "æ˜¾ç¤º MAC åœ°å€ä¾›åº”å•†"
 
 #: db/SCHEMA.sql:596
 msgid "Recent Logins"
-msgstr "×î½üµÇÂ¼"
+msgstr "æœ€è¿‘ç™»å½•"
 
 #: db/SCHEMA.sql:596
 msgid "Shows most recent user logins"
-msgstr "ÏÔÊ¾×î½üµÄÓÃ»§µÇÂ¼"
+msgstr "æ˜¾ç¤ºæœ€è¿‘çš„ç”¨æˆ·ç™»å½•"
 
 #: db/SCHEMA.sql
 msgid "FirewallAddressObject"
-msgstr "·À»ğÇ½µØÖ·¶ÔÏó"
+msgstr "é˜²ç«å¢™åœ°å€å¯¹è±¡"
 
 #: db/SCHEMA.sql
 msgid "Customer_id"
-msgstr "¿Í»§ ID"
+msgstr "å®¢æˆ· ID"
 
 #: app/subnets/subnet-details/subnet-details.php:403
 msgid "localhost"
-msgstr "±¾µØ"
+msgstr "æœ¬åœ°"
 
 #: app/subnets/subnet-details/subnet-details.php:403
 msgid "Scanning from local machine"
-msgstr "´Ó±¾µØ»úÆ÷É¨Ãè"
+msgstr "ä»æœ¬åœ°æœºå™¨æ‰«æ"
 
 #: app/admin/groups/index.php:104
 msgid "Guests"
-msgstr "·Ã¿Í"
+msgstr "è®¿å®¢"
 
 #: app/admin/groups/index.php:105
 msgid "default Guest group (viewers)"
-msgstr "Ä¬ÈÏ·Ã¿Í×é£¨²é¿´£©"
+msgstr "é»˜è®¤è®¿å®¢ç»„ï¼ˆæŸ¥çœ‹ï¼‰"
 
 #: app/admin/groups/index.php:104
 msgid "Operators"
-msgstr "²Ù×÷Ô±"
+msgstr "æ“ä½œå‘˜"
 
 #: app/admin/groups/index.php:105
 msgid "default Operator group"
-msgstr "Ä¬ÈÏ²Ù×÷Ô±×é"
+msgstr "é»˜è®¤æ“ä½œå‘˜ç»„"
 
 #: app/admin/users/print-all.php:103
 msgid "local"
-msgstr "±¾µØ"
+msgstr "æœ¬åœ°"
 
 #: app/admin/users/print-all.php:103
 msgid "Local database"
-msgstr "±¾µØÊı¾İ¿â"
+msgstr "æœ¬åœ°æ•°æ®åº“"
 
 #: site/ipaddr/modifyIpAddressCheck.php
 msgid "IP edit successful"
-msgstr "IP ĞŞ¸Ä³É¹¦"
+msgstr "IP ä¿®æ”¹æˆåŠŸ"
 
 #: site/ipaddr/modifyIpAddressCheck.php
 msgid "IP add successful"
-msgstr "IP Ìí¼Ó³É¹¦"
+msgstr "IP æ·»åŠ æˆåŠŸ"
 
 #: site/ipaddr/modifyIpAddressCheck.php
 msgid "IP delete successful"
-msgstr "IP É¾³ı³É¹¦"
+msgstr "IP åˆ é™¤æˆåŠŸ"
 
 #: app/tools/vlan/domain-vlans.php:34
 msgid "default"
-msgstr "Ä¬ÈÏ"
+msgstr "é»˜è®¤"
 
 #: app/tools/vlan/domain-vlans.php:35
 msgid "default L2 domain"
-msgstr "Ä¬ÈÏ L2 Óò"
+msgstr "é»˜è®¤ L2 åŸŸ"
 
 # app/tools/powerDNS/index.php:48
 msgid "Host Records"
-msgstr "Ö÷»ú¼ÇÂ¼"
+msgstr "ä¸»æœºè®°å½•"
 
 # app/tools/powerDNS/index.php:48
 msgid "Reverse V4"
-msgstr "·´Ïò V4"
+msgstr "åå‘ V4"
 
 # app/tools/powerDNS/index.php:48
 msgid "Reverse V6"
-msgstr "·´Ïò V6"
+msgstr "åå‘ V6"
 
 # app/tools/powerDNS/index.php:48
 msgid "Settings"
-msgstr "ÉèÖÃ"
+msgstr "è®¾ç½®"
 
 #: functions/classes/class.PowerDNS.php:344
 msgid "1 minute"
-msgstr "1 ·ÖÖÓ"
+msgstr "1 åˆ†é’Ÿ"
 
 #: functions/classes/class.PowerDNS.php:345
 msgid "3 minutes"
-msgstr "3 ·ÖÖÓ"
+msgstr "3 åˆ†é’Ÿ"
 
 #: functions/classes/class.PowerDNS.php:346
 msgid "5 minutes"
-msgstr "5 ·ÖÖÓ"
+msgstr "5 åˆ†é’Ÿ"
 
 #: functions/classes/class.PowerDNS.php:347
 msgid "10 minutes"
-msgstr "10 ·ÖÖÓ"
+msgstr "10 åˆ†é’Ÿ"
 
 #: functions/classes/class.PowerDNS.php:348
 msgid "15 minutes"
-msgstr "15 ·ÖÖÓ"
+msgstr "15 åˆ†é’Ÿ"
 
 #: functions/classes/class.PowerDNS.php:349
 msgid "30 minutes"
-msgstr "30 ·ÖÖÓ"
+msgstr "30 åˆ†é’Ÿ"
 
 #: functions/classes/class.PowerDNS.php:350
 msgid "45 minutes"
-msgstr "45 ·ÖÖÓ"
+msgstr "45 åˆ†é’Ÿ"
 
 #: functions/classes/class.PowerDNS.php:351
 msgid "1 hour"
-msgstr "1 Ğ¡Ê±"
+msgstr "1 å°æ—¶"
 
 #: functions/classes/class.PowerDNS.php:352
 msgid "2 hours"
-msgstr "2 Ğ¡Ê±"
+msgstr "2 å°æ—¶"
 
 #: functions/classes/class.PowerDNS.php:353
 msgid "3 hours"
-msgstr "3 Ğ¡Ê±"
+msgstr "3 å°æ—¶"
 
 #: functions/classes/class.PowerDNS.php:354
 msgid "6 hours"
-msgstr "6 Ğ¡Ê±"
+msgstr "6 å°æ—¶"
 
 #: functions/classes/class.PowerDNS.php:355
 msgid "12 hours"
-msgstr "12 Ğ¡Ê±"
+msgstr "12 å°æ—¶"
 
 #: functions/classes/class.PowerDNS.php:356
 msgid "24 hours"
-msgstr "24 Ğ¡Ê±"
+msgstr "24 å°æ—¶"
 
 #: functions/classes/class.PowerDNS.php:357
 msgid "1 week"
-msgstr "1 ÖÜ"
+msgstr "1 å‘¨"
 
 #: functions/classes/class.PowerDNS.php:279
 msgid "NATIVE"
-msgstr "±¾µØ"
+msgstr "æœ¬åœ°"
 
 #: functions/classes/class.PowerDNS.php:280
 msgid "MASTER"
-msgstr "Ö÷"
+msgstr "ä¸»"
 
 #: functions/classes/class.PowerDNS.php:281
 msgid "SLAVE"
-msgstr "´Ó"
+msgstr "ä»"
 
 #: functions/classes/class.PowerDNS.php:282
 msgid "SUPERSLAVE"
-msgstr "¸ß¼¶´Ó"
+msgstr "é«˜çº§ä»"
 
 #: db/SCHEMA.sql
 msgid "Router"
-msgstr "Â·ÓÉÆ÷"
+msgstr "è·¯ç”±å™¨"
 
 #: db/SCHEMA.sql
 msgid "Firewall"
-msgstr "·À»ğÇ½"
+msgstr "é˜²ç«å¢™"
 
 #: db/SCHEMA.sql
 msgid "Hub"
-msgstr "¼¯ÏßÆ÷"
+msgstr "é›†çº¿å™¨"
 
 #: db/SCHEMA.sql
 msgid "Workstation"
-msgstr "¹¤×÷Õ¾"
+msgstr "å·¥ä½œç«™"
 
 #: db/SCHEMA.sql
 msgid "Laptop"
-msgstr "±Ê¼Ç±¾µçÄÔ"
+msgstr "ç¬”è®°æœ¬ç”µè„‘"
 
 #: db/SCHEMA.sql
 msgid "Other"
-msgstr "ÆäËû"
+msgstr "å…¶ä»–"
 
 #: db/SCHEMA.sql
 msgid "Wireless"
-msgstr "ÎŞÏß"
+msgstr "æ— çº¿"
 
 #: db/SCHEMA.sql
 msgid "no"
-msgstr "·ñ"
+msgstr "å¦"
 
 #: db/SCHEMA.sql
 msgid "yes"
-msgstr "ÊÇ"
+msgstr "æ˜¯"
 
 msgid "account"
-msgstr "ÕÊ»§"
+msgstr "å¸æˆ·"
 
 msgid "permissions"
-msgstr "È¨ÏŞ"
+msgstr "æƒé™"
 
 msgid "passkeys"
-msgstr "Í¨ĞĞÃÜÔ¿"
+msgstr "é€šè¡Œå¯†é’¥"
 
 msgid "Success"
-msgstr "³É¹¦"
+msgstr "æˆåŠŸ"
 
 msgid "Failed"
-msgstr "Ê§°Ü"
+msgstr "å¤±è´¥"
 
 # /app/admin/powerDNS/index.php:51
 #: app/admin/powerDNS/index.php:51
 msgid "domains"
-msgstr "ÓòÃû"
+msgstr "åŸŸå"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
 #: app/admin/powerDNS/index.php:51
 msgid "host_records"
-msgstr "Ö÷»ú¼ÇÂ¼"
+msgstr "ä¸»æœºè®°å½•"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
 #: app/admin/powerDNS/index.php:51
 msgid "reverse_v4"
-msgstr "·´Ïò V4"
+msgstr "åå‘ V4"
 
 # app/tools/powerDNS/index.php:48
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
 #: app/admin/powerDNS/index.php:51
 msgid "reverse_v6"
-msgstr "·´Ïò V6"
+msgstr "åå‘ V6"
 
 # app/admin/powerDNS/index.php:51
 # app/admin/powerDNS/index.php:51
 #: app/admin/powerDNS/index.php:51
 msgid "defaults"
-msgstr "Ä¬ÈÏ"
+msgstr "é»˜è®¤"
 
 # app/admin/firewall-zones/index.php:24
 msgid "Zones"
-msgstr "ÇøÓò"
+msgstr "åŒºåŸŸ"
 
 #: app/admin/firewall-zones/settings-save.php:109
 msgid "network"
-msgstr "ÍøÂç"
+msgstr "ç½‘ç»œ"
 
 #: app/admin/firewall-zones/settings-save.php:61
 msgid "decimal"
-msgstr "Ê®½øÖÆ"
+msgstr "åè¿›åˆ¶"
 
 #: app/admin/firewall-zones/settings-save.php:61
 msgid "hex"
-msgstr "Ê®Áù½øÖÆ"
+msgstr "åå…­è¿›åˆ¶"
 
 #: app/admin/firewall-zones/settings-save.php:61
 msgid "text"
-msgstr "ÎÄ±¾"
+msgstr "æ–‡æœ¬"
+
+#~ msgid "Device description will be updated."
+#~ msgstr "è®¾å¤‡æè¿°å°†è¢«æ›´æ–°ã€‚"
+
+#~ msgid "Device ip_addr will be updated."
+#~ msgstr "è®¾å¤‡ IP åœ°å€å°†è¢«æ›´æ–°ã€‚"
+
+#~ msgid "DeviceType will be updated."
+#~ msgstr "è®¾å¤‡ç±»å‹å°†è¢«æ›´æ–°ã€‚"
+
+#~ msgid "sectionId will be updated."
+#~ msgstr "åŒºåŸŸ ID å°†è¢«æ›´æ–°ã€‚"
+
+#~ msgid "rack will be updated."
+#~ msgstr "æœºæŸœå°†è¢«æ›´æ–°ã€‚"
+
+#~ msgid "rack_start will be updated."
+#~ msgstr "æœºæŸœå¯åŠ¨å°†ä¼šè¢«æ›´æ–°ã€‚"
+
+#~ msgid "rack_size will be updated."
+#~ msgstr "æœºæŸœå°ºå¯¸å°†è¢«æ›´æ–°ã€‚"
+
+#~ msgid "location will be updated."
+#~ msgstr "ä½ç½®å°†è¢«æ›´æ–°ã€‚"
+
+#~ msgid "Lock POST transactions"
+#~ msgstr "é”å®š POST äº‹åŠ¡"

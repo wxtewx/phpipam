@@ -215,8 +215,8 @@ if ($User->settings->enableCustomers=="1" && $User->get_module_permissions ("cus
 			}
 
 			$loops = array();
-			$loops[] = ($rack->topDown) ? array("values"=>range(1,$rack->size),"label"=>"Front side") : array("values"=>range($rack->size,1),"label"=>"Front side");
-			if ($rack->hasBack) $loops[] = ($rack->topDown) ? array("values"=>range($rack->size + 1,2 * $rack->size),"label"=>"Back side") : array("values"=>range(2 * $rack->size,$rack->size+1),"label"=>"Back side");
+			$loops[] = ($rack->topDown) ? array("values"=>range(1,$rack->size),"label"=>_("Front side")) : array("values"=>range($rack->size,1),"label"=>_("Front side"));
+			if ($rack->hasBack) $loops[] = ($rack->topDown) ? array("values"=>range($rack->size + 1,2 * $rack->size),"label"=>_("Back side")) : array("values"=>range(2 * $rack->size,$rack->size+1),"label"=>_("Back side"));
 
 			// find contents that are in invalid positions
 			$invalid = array();
@@ -226,7 +226,7 @@ if ($User->settings->enableCustomers=="1" && $User->get_module_permissions ("cus
 					$invalid[] = $key;
 				}
 			}
-			$loops[] = array("values"=>$invalid,"label"=>"Invalid");
+			$loops[] = array("values"=>$invalid,"label"=>_("Invalid"));
 
 			// iterate through all rack items, front first, then back, following topDown or !topDown order
 			$outputCount = 0;
