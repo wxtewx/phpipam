@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-11 15:32+0800\n"
+"POT-Creation-Date: 2026-07-11 19:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3823,7 +3823,7 @@ msgid "-- autodiscovered --"
 msgstr ""
 
 #: /root/phpipam/functions/scripts/discoveryCheck.php:259
-msgid "This host was autodiscovered on %s"
+msgid "This host was autodiscovered on"
 msgstr ""
 
 #: /root/phpipam/functions/scripts/discoveryCheck.php:302
@@ -10458,6 +10458,12 @@ msgstr ""
 #: /root/phpipam/app/subnets/scan/subnet-scan-execute-snmp-mac.php:310
 #: /root/phpipam/app/subnets/scan/subnet-scan-execute-scan-snmp-arp.php:217
 msgid "Add discovered hosts"
+msgstr ""
+
+#: /root/phpipam/app/subnets/scan/subnet-scan-execute-scan-icmp.php:153
+#: /root/phpipam/app/subnets/scan/subnet-scan-execute-scan-telnet.php:112
+#: /root/phpipam/app/subnets/scan/subnet-scan-execute-update-icmp.php:178
+msgid "Scan method"
 msgstr ""
 
 #: /root/phpipam/app/subnets/scan/subnet-scan-execute-scan-telnet.php:14
@@ -19198,30 +19204,3 @@ msgstr "十六进制"
 #: app/admin/firewall-zones/settings-save.php:61
 msgid "text"
 msgstr "文本"
-
-#~ msgid "Device description will be updated."
-#~ msgstr "设备描述将被更新。"
-
-#~ msgid "Device ip_addr will be updated."
-#~ msgstr "设备 IP 地址将被更新。"
-
-#~ msgid "DeviceType will be updated."
-#~ msgstr "设备类型将被更新。"
-
-#~ msgid "sectionId will be updated."
-#~ msgstr "区域 ID 将被更新。"
-
-#~ msgid "rack will be updated."
-#~ msgstr "机柜将被更新。"
-
-#~ msgid "rack_start will be updated."
-#~ msgstr "机柜启动将会被更新。"
-
-#~ msgid "rack_size will be updated."
-#~ msgstr "机柜尺寸将被更新。"
-
-#~ msgid "location will be updated."
-#~ msgstr "位置将被更新。"
-
-#~ msgid "Lock POST transactions"
-#~ msgstr "锁定 POST 事务"

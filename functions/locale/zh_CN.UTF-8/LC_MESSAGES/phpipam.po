@@ -10501,6 +10501,12 @@ msgstr "发现 0 个新主机"
 msgid "Add discovered hosts"
 msgstr "添加发现的主机"
 
+#: /root/phpipam/app/subnets/scan/subnet-scan-execute-scan-icmp.php:153
+#: /root/phpipam/app/subnets/scan/subnet-scan-execute-scan-telnet.php:112
+#: /root/phpipam/app/subnets/scan/subnet-scan-execute-update-icmp.php:178
+msgid "Scan method"
+msgstr "扫描方式"
+
 #: /root/phpipam/app/subnets/scan/subnet-scan-execute-scan-telnet.php:14
 msgid "Please enter ports to scan"
 msgstr "请输入要扫描的端口"
@@ -19304,30 +19310,3 @@ msgstr "十六进制"
 #: app/admin/firewall-zones/settings-save.php:61
 msgid "text"
 msgstr "文本"
-
-#~ msgid "Device description will be updated."
-#~ msgstr "设备描述将被更新。"
-
-#~ msgid "Device ip_addr will be updated."
-#~ msgstr "设备 IP 地址将被更新。"
-
-#~ msgid "DeviceType will be updated."
-#~ msgstr "设备类型将被更新。"
-
-#~ msgid "sectionId will be updated."
-#~ msgstr "区域 ID 将被更新。"
-
-#~ msgid "rack will be updated."
-#~ msgstr "机柜将被更新。"
-
-#~ msgid "rack_start will be updated."
-#~ msgstr "机柜启动将会被更新。"
-
-#~ msgid "rack_size will be updated."
-#~ msgstr "机柜尺寸将被更新。"
-
-#~ msgid "location will be updated."
-#~ msgstr "位置将被更新。"
-
-#~ msgid "Lock POST transactions"
-#~ msgstr "锁定 POST 事务"
