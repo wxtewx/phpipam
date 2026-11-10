@@ -1,35 +1,17 @@
-<?php
-/* config */
-if (!file_exists("config.php"))	{ die("<br><hr>-- config.php file missing! Please copy default config file `config.dist.php` to `config.php` and set configuration! --<hr><br>phpipam installation documentation: <a href='http://phpipam.net/documents/installation/'>http://phpipam.net/documents/installation/</a>"); }
+<!DOCTYPE HTML>
+<html lang="en">
 
-/* site functions */
-require_once( 'functions/functions.php' );
+<head>
+    <title>phpIPAM installation</title>
+</head>
 
-/* API check - process API if requested */
-if ($Rewrite->is_api ()) {
-	require ("api/index.php");
-}
-else {
-	header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
-	header("Pragma: no-cache");                         //HTTP 1.0
-	header("Expires: Sat, 26 Jul 2016 05:00:00 GMT");   //Date in the past
+<body>
 
-	# if not install fetch settings etc
-	if($GET->page!="install" ) {
-		# database object
-		$Database = new Database_PDO;
+    <p>phpIPAM v1.9.0 relocated all HTML application code from the project root directory into the \"public\" sub-directory.</p>
 
-		# check if this is a new installation
-		require('functions/checks/check_db_install.php');
+    <p>Please update your webserver, reverse-proxy or load-balancer configuration to point to the new location.</p>
 
-		# initialize objects
-		$Result		= new Result;
-		$User		= new User ($Database);
-		$Sections	= new Sections ($Database);
-		$Subnets	= new Subnets ($Database);
-		$Tools	    = new Tools ($Database);
-		$Addresses	= new Addresses ($Database);
-		$Log 		= new Logging ($Database);
+</body>
 
 		# reset url for base
 		$url = $User->createURL ();
