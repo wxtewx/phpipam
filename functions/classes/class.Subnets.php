@@ -3840,13 +3840,10 @@ class Subnets extends Common_functions
 
         $parent = $this->fetch_subnet(null, $subnetMasterId);
 
-			if (count($subnets) == 0) continue;
-			$html[] = "<li class='disabled'>"._("Subnet Mask").": $prefix</li>";
-			foreach ($subnets as $cidr) {
-				$html[] = "<li><a href='' data-cidr='$cidr'>- $cidr</a></li>";
-			}
-			if ($truncated) $html[] = "<li><center>...</center></li>";
-		}
+        // Ignore invalid id's and folders
+        if (! is_object($parent) || $parent->isFolder == '1') {
+            return '';
+        }
 
         // Get freespacemap array from subnet using split/exclusion algorithm
         $fsm = $this->get_subnet_freespacemap($parent);
